@@ -1,0 +1,14 @@
+.form-group{
+    margin-bottom:0.3rem;
+}
+
+.form-control,.custom-select,.custom-file-input{
+    border-radius: .25rem;
+    /* height: 2em; */
+    border:1px solid #80bdff;
+}
+
+.custom-file-label{
+    border-radius: .25rem;
+    border:1px solid #80bdff;
+}

@@ -1,0 +1,210 @@
+<h6 class="text-center" style="background-color: rgba(0,123,255,0.25);padding:0.2em;"><b>{{title}}</b></h6>
+<div class="container-fluid">
+  <div class="card mx-auto">
+    <div class="card-body">
+
+      <!-- <form [formGroup]="rf">
+
+        <div class="row">
+
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="name">Candidate Names</label>
+              <input type="text" placeholder="Enter Candidate name" autocomplete="off" formControlName="candidateName" class="form-control" />
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="name">Moblile no</label>
+              <input type="text" placeholder="Enter mobileNo" autocomplete="off" formControlName="mobileNo" class="form-control" />
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="name">Status</label>
+              <select class="custom-select" formControlName="status" title="placeholder">
+                  <option selected="selected">==Select Status==</option> 
+                <option value="Scheduled">Scheduled</option>
+                  <option value="Selected">Selected</option>
+                  <option value="Rejected">Rejected</option>
+                  <option value="Hold">Hold</option>
+                </select>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="name">Stream</label>
+              <input type="text" placeholder="Enter Stream" autocomplete="off" formControlName="stream" class="form-control" />
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="name">Experience From</label>
+              <input type="text" placeholder="Enter experience from" autocomplete="off" formControlName="expFrom" class="form-control" />
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="name">Experience From</label>
+              <input type="text" placeholder="Enter Experience To" autocomplete="off" formControlName="expTo" class="form-control" />
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="name">Date From</label>
+              <input type="date"  formControlName="dateFrom"  class="form-control" />
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="dateTo">Date To</label>
+              <input type="date"  formControlName="dateTo" class="form-control" />
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="name">Skill</label>
+              <input type="text" placeholder="Select your skill" autocomplete="off" class="form-control" formControlName="skill" />
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="form-group">
+              <br>
+              <button class="btn btn-primary" (click)="onSearch();">search</button>
+            </div>
+          </div>
+        </div>
+      </form>                               
+
+      <br>
+      <br> -->
+
+
+      <div class="row">
+        <div class="col-md-11">
+          <div class="input-group input-group-sm mb-3">
+            <input type="text" placeholder="placeholder" class="form-control" [(ngModel)]="user" placeholder="search here to get the details.">
+          </div>
+        </div>
+        <div class="col-md-1">
+          <div class="ml-auto">
+            <button class="btn btn-sm btn-primary" type="submit" data-toggle="tooltip" data-placement="top" title="download to excel"
+              (click)="tableToJson(response)">
+              <i class="fa fa-download" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="table-responsive">
+        <table id="candidate-table-list" class="table table-bordered table-striped table-sm">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">S.No</th>
+              <th scope="col">Name</th>
+              <th scope="col">Moblie No</th>
+              <th scope="col">Contact Person</th>
+              <th scope="col">Primary Skill</th>
+              <th scope="col">Secondary Skill</th>
+              <th scope="col">Status</th>
+              <th scope="col">Client Interview Date</th>
+              <th scope="col">Client Interview Time</th>
+              <th scope="col">&nbsp;</th>
+            </tr>
+
+          </thead>
+          <tbody>
+            <tr *ngFor="let x of pagedItems  | 
+            tableFilter: {
+              candidateName:user,
+              mobileNo:user,
+              contactPerson:user, 
+              primarySkill:user,
+              secondarySkill:user,
+              status:user,
+              clientInterviewDate:user,
+              clientInterviewTime:user
+               } 
+               ; let i=index; ">
+              <td scope="row">{{i+1}}</td>
+              <td>{{x?.candidateName}}</td>
+              <td>{{x?.mobileNo}}</td>
+              <td>{{x?.contactPerson}}</td>
+              <td>{{x?.primarySkill}}</td>
+              <td>{{x?.secondarySkill}}</td>
+              <td>{{x?.status}}</td>
+              <td>{{x?.clientInterviewDate}}</td>
+              <td>{{x?.clientInterviewTime}}</td>
+              <td class="text-center">
+                <div class="btn-group btn-group-sm">
+                  <div class="btn-group" role="group" aria-label="operations">
+
+                    <!-- <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Profile Summary"
+                    (click)="profileSummary(x)">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                  </button> -->
+
+                    <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit"
+                      (click)="clientDetailsUpdate(x)">
+                      <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    </button>
+
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+
+
+
+        </table>
+
+        <!-- pagination -->
+        <nav aria-label="Page navigation example">
+          <ul class="pagination" *ngIf="pager.pages && pager.pages.length" class="pagination">
+            <!-- <li class="page-item" [ngClass]="{disabled:pager.currentPage === 1}">
+                <a class="page-link" (click)="setPage(1)">First</a>
+              </li> -->
+            <li class="page-item" [ngClass]="{disabled:pager.currentPage === 1}">
+              <a class="page-link" (click)="setPage(pager.currentPage - 1)">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Previous</span>
+              </a>
+            </li>
+            <li class="page-item" *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}">
+              <a class="page-link" (click)="setPage(page)">{{page}}</a>
+            </li>
+            <li class="page-item" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+              <a class="page-link" (click)="setPage(pager.currentPage + 1)">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only">Next</span>
+              </a>
+            </li>
+            <!-- <li class="page-item" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+                <a class="page-link" (click)="setPage(pager.totalPages)">Last</a>
+              </li> -->
+          </ul>
+        </nav>
+        
+      </div>
+
+
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,55 @@
+<h6 class="text-center AboutESS" style="background-color: rgba(0,123,255,0.25);padding:0.2em;"><b>{{title}}</b></h6>
+<div class="container">
+  <div class="card mx-auto">
+    <div class="card-body">
+      <form [formGroup]="rf">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="From" class="required">From :</label>
+              <input type="text" class="form-control" formControlName="from" autocomplete="off" placeholder="">
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="From" class="required">To :</label>
+              <input type="text" class="form-control" formControlName="to" autocomplete="off" placeholder="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="From" class="required">CC :</label>
+              <input type="text" class="form-control" formControlName="cc" autocomplete="off" placeholder="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="From" class="required">Bcc :</label>
+              <input type="text" class="form-control" formControlName="bcc" autocomplete="off" placeholder="">
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="From" class="required">Subject :</label>
+              <input type="text" class="form-control" formControlName="subject" autocomplete="off" placeholder="">
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="comments">Body :</label>
+              <textarea formControlName="comments" class="form-control" formControlName="message" rows="5" autocomplete="off"></textarea>
+              <!-- <div *ngIf="submitted && f.comments.errors" class="invalid-feedback">
+                <div *ngIf="f.comments.errors.required">Comments are required</div>
+              </div> -->
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <button class="btn btn-primary" (click)="onSubmit()" type="submit">Send</button>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

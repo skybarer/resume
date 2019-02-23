@@ -1,0 +1,1926 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>resume documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">resume documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>CandidateDetailsListComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/candidate-details-list/candidate-details-list.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-candidate-details-list</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./candidate-details-list.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./candidate-details-list.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#candidateIdList">candidateIdList</a>
+                            </li>
+                            <li>
+                                <a href="#data">data</a>
+                            </li>
+                            <li>
+                                <a href="#errorMessage">errorMessage</a>
+                            </li>
+                            <li>
+                                <a href="#pagedItems">pagedItems</a>
+                            </li>
+                            <li>
+                                <a href="#pager">pager</a>
+                            </li>
+                            <li>
+                                <a href="#response">response</a>
+                            </li>
+                            <li>
+                                <a href="#title">title</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#totalItems">totalItems</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#editCandidateDetails">editCandidateDetails</a>
+                            </li>
+                            <li>
+                                <a href="#hasRole">hasRole</a>
+                            </li>
+                            <li>
+                                <a href="#initateHackerrank">initateHackerrank</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#processToClient">processToClient</a>
+                            </li>
+                            <li>
+                                <a href="#ProfileSummary">ProfileSummary</a>
+                            </li>
+                            <li>
+                                <a href="#profileSummaryAdd">profileSummaryAdd</a>
+                            </li>
+                            <li>
+                                <a href="#sendEmail">sendEmail</a>
+                            </li>
+                            <li>
+                                <a href="#setPage">setPage</a>
+                            </li>
+                            <li>
+                                <a href="#tableToExcel">tableToExcel</a>
+                            </li>
+                            <li>
+                                <a href="#tableToJson">tableToJson</a>
+                            </li>
+                            <li>
+                                <a href="#uploadCandidateProfile">uploadCandidateProfile</a>
+                            </li>
+                            <li>
+                                <a href="#viewCandidateDetails">viewCandidateDetails</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(getResumeService: <a href="../injectables/GetResumeService.html">GetResumeService</a>, activeRouter: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, excelService: <a href="../injectables/ExcelServiceService.html">ExcelServiceService</a>, notifier: NotifierService, paginationService: <a href="../injectables/PaginationService.html">PaginationService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/candidate-details-list/candidate-details-list.component.ts:38</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>getResumeService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/GetResumeService.html" target="_self" >GetResumeService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>activeRouter</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>excelService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/ExcelServiceService.html" target="_self" >ExcelServiceService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>notifier</td>
+                                                  
+                                                        <td>
+                                                                    <code>NotifierService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>paginationService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/PaginationService.html" target="_self" >PaginationService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="editCandidateDetails"></a>
+                        <span class="name">
+                            <b>
+                            editCandidateDetails
+                            </b>
+                            <a href="#editCandidateDetails"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>editCandidateDetails(candidate)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="83" class="link-to-prism">src/app/candidate-details-list/candidate-details-list.component.ts:83</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>candidate</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="hasRole"></a>
+                        <span class="name">
+                            <b>
+                            hasRole
+                            </b>
+                            <a href="#hasRole"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>hasRole(input: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="224" class="link-to-prism">src/app/candidate-details-list/candidate-details-list.component.ts:224</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>input</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="initateHackerrank"></a>
+                        <span class="name">
+                            <b>
+                            initateHackerrank
+                            </b>
+                            <a href="#initateHackerrank"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>initateHackerrank()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="144" class="link-to-prism">src/app/candidate-details-list/candidate-details-list.component.ts:144</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnInit"></a>
+                        <span class="name">
+                            <b>
+                            ngOnInit
+                            </b>
+                            <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ngOnInit()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">src/app/candidate-details-list/candidate-details-list.component.ts:67</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="processToClient"></a>
+                        <span class="name">
+                            <b>
+                            processToClient
+                            </b>
+                            <a href="#processToClient"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>processToClient()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="123" class="link-to-prism">src/app/candidate-details-list/candidate-details-list.component.ts:123</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ProfileSummary"></a>
+                        <span class="name">
+                            <b>
+                            ProfileSummary
+                            </b>
+                            <a href="#ProfileSummary"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ProfileSummary(x)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="99" class="link-to-prism">src/app/candidate-details-list/candidate-details-list.component.ts:99</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>x</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="profileSummaryAdd"></a>
+                        <span class="name">
+                            <b>
+                            profileSummaryAdd
+                            </b>
+                            <a href="#profileSummaryAdd"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>profileSummaryAdd(x)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="115" class="link-to-prism">src/app/candidate-details-list/candidate-details-list.component.ts:115</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>x</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sendEmail"></a>
+                        <span class="name">
+                            <b>
+                            sendEmail
+                            </b>
+                            <a href="#sendEmail"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>sendEmail()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="176" class="link-to-prism">src/app/candidate-details-list/candidate-details-list.component.ts:176</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="setPage"></a>
+                        <span class="name">
+                            <b>
+                            setPage
+                            </b>
+                            <a href="#setPage"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>setPage(page: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/candidate-details-list/candidate-details-list.component.ts:52</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>page</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="tableToExcel"></a>
+                        <span class="name">
+                            <b>
+                            tableToExcel
+                            </b>
+                            <a href="#tableToExcel"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>tableToExcel(tableId)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="213" class="link-to-prism">src/app/candidate-details-list/candidate-details-list.component.ts:213</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>tableId</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="tableToJson"></a>
+                        <span class="name">
+                            <b>
+                            tableToJson
+                            </b>
+                            <a href="#tableToJson"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>tableToJson(tableToJson)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="220" class="link-to-prism">src/app/candidate-details-list/candidate-details-list.component.ts:220</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>tableToJson</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="uploadCandidateProfile"></a>
+                        <span class="name">
+                            <b>
+                            uploadCandidateProfile
+                            </b>
+                            <a href="#uploadCandidateProfile"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>uploadCandidateProfile(candidate)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="88" class="link-to-prism">src/app/candidate-details-list/candidate-details-list.component.ts:88</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>candidate</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="viewCandidateDetails"></a>
+                        <span class="name">
+                            <b>
+                            viewCandidateDetails
+                            </b>
+                            <a href="#viewCandidateDetails"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>viewCandidateDetails(candidate)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="95" class="link-to-prism">src/app/candidate-details-list/candidate-details-list.component.ts:95</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>candidate</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="candidateIdList"></a>
+                        <span class="name">
+                            <b>
+                            candidateIdList
+                            </b>
+                            <a href="#candidateIdList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>candidateIdList:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/candidate-details-list/candidate-details-list.component.ts:24</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="data"></a>
+                        <span class="name">
+                            <b>
+                            data
+                            </b>
+                            <a href="#data"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>data:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/candidate-details-list/candidate-details-list.component.ts:38</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="errorMessage"></a>
+                        <span class="name">
+                            <b>
+                            errorMessage
+                            </b>
+                            <a href="#errorMessage"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>errorMessage:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/candidate-details-list/candidate-details-list.component.ts:37</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="pagedItems"></a>
+                        <span class="name">
+                            <b>
+                            pagedItems
+                            </b>
+                            <a href="#pagedItems"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>pagedItems:     <code>any[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>any[]</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/candidate-details-list/candidate-details-list.component.ts:32</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="pager"></a>
+                        <span class="name">
+                            <b>
+                            pager
+                            </b>
+                            <a href="#pager"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>pager:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/candidate-details-list/candidate-details-list.component.ts:29</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="response"></a>
+                        <span class="name">
+                            <b>
+                            response
+                            </b>
+                            <a href="#response"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>response:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/candidate-details-list/candidate-details-list.component.ts:36</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="title"></a>
+                        <span class="name">
+                            <b>
+                            title
+                            </b>
+                            <a href="#title"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>title:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;PROFILE DETAILS&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/candidate-details-list/candidate-details-list.component.ts:35</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="totalItems"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            totalItems
+                            </b>
+                            <a href="#totalItems"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>totalItems:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/candidate-details-list/candidate-details-list.component.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { GetResumeService } from &#x27;../get-resume-data/get-resume.service&#x27;;
+import { Router, ActivatedRoute } from &#x27;@angular/router&#x27;;
+import * as FileSaver from &#x27;file-saver&#x27;;
+import { ExcelServiceService } from &#x27;./excel-service.service&#x27;;
+import { NotifierService } from &#x27;angular-notifier&#x27;;
+import { PaginationService } from &#x27;../pagination.service&#x27;;
+const EXCEL_TYPE &#x3D; &#x27;application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset&#x3D;UTF-8&#x27;;
+const EXCEL_EXTENSION &#x3D; &#x27;.xlsx&#x27;;
+
+declare var $: any;
+
+@Component({
+  selector: &#x27;app-candidate-details-list&#x27;,
+  templateUrl: &#x27;./candidate-details-list.component.html&#x27;,
+  styleUrls: [&#x27;./candidate-details-list.component.css&#x27;]
+})
+
+
+
+export class CandidateDetailsListComponent implements OnInit {
+
+
+  candidateIdList &#x3D; {};
+  // array of all items to be paged
+  private totalItems: number;
+
+  // pager object
+  pager: any &#x3D; {};
+
+  // paged items
+  pagedItems: any[];
+
+
+  title &#x3D; &#x27;PROFILE DETAILS&#x27;;
+  response: any;
+  errorMessage: string;
+  data: any;
+
+
+  constructor(
+    private getResumeService: GetResumeService,
+    private activeRouter: ActivatedRoute,
+    private router: Router,
+    private excelService: ExcelServiceService,
+    private notifier: NotifierService,
+    private paginationService: PaginationService
+  ) {
+
+  }
+
+  setPage(page: number) {
+
+    // get pager object from service
+    this.pager &#x3D; this.paginationService.getPager(this.totalItems, page);
+
+    // get current page of items
+    // this.pagedItems &#x3D; this.allItems.slice(this.pager.startIndex, this.pager.endIndex + 1);
+    this.getResumeService.allCandidateDetails(page)
+      .subscribe(response &#x3D;&gt; {
+        this.pagedItems &#x3D; response.message;
+        this.totalItems &#x3D; response.recordCount;
+      });
+  }
+
+
+  ngOnInit() {
+
+    this.data &#x3D; JSON.parse(localStorage.getItem(&#x27;currentUser&#x27;));
+
+    this.getResumeService.allCandidateDetails(1)
+      .subscribe(response &#x3D;&gt; {
+        if (response !&#x3D; null) {
+          this.pagedItems &#x3D; response.message;
+          this.totalItems &#x3D; response.recordCount;
+          this.setPage(1);
+        }
+      }, error &#x3D;&gt; {
+        this.notifier.notify(&#x27;error&#x27;, error.message);
+      });
+  }
+
+  editCandidateDetails(candidate) {
+    localStorage.setItem(&#x27;update-candidate-details&#x27;, JSON.stringify(candidate));
+    // console.log(candidate);
+    this.router.navigate([&#x27;update-candidate-details&#x27;], { relativeTo: this.activeRouter.parent });
+  }
+  uploadCandidateProfile(candidate) {
+    localStorage.setItem(&#x27;upload-candidate-profile&#x27;, JSON.stringify(candidate));
+    // console.log(candidate);
+    this.router.navigate([&#x27;upload-candidate-profile&#x27;], { relativeTo: this.activeRouter.parent });
+  }
+
+
+  viewCandidateDetails(candidate) {
+    localStorage.setItem(&#x27;view-candidate-details&#x27;, JSON.stringify(candidate));
+    this.router.navigate([&#x27;view-candidate-details&#x27;], { relativeTo: this.activeRouter.parent });
+  }
+  ProfileSummary(x) {
+    this.getResumeService.profileDetails(x.id)
+      .subscribe(response &#x3D;&gt; {
+        if (response.message &#x3D;&#x3D;&#x3D; &#x27;Details are empty&#x27;) {
+
+          this.notifier.notify(&#x27;warning&#x27;, &#x27;Candidate Profile details are empty.&#x27;);
+          this.notifier.notify(&#x27;success&#x27;, &#x27;Routed to add profile Summary.&#x27;);
+          this.router.navigate([&#x27;candidate-profile-summary-add&#x27;], { relativeTo: this.activeRouter.parent });
+        } else {
+          localStorage.setItem(&#x27;candidate-profile-summary&#x27;, JSON.stringify(response.message));
+          this.router.navigate([&#x27;candidate-profile-summary&#x27;], { relativeTo: this.activeRouter.parent });
+        }
+
+      })
+
+  }
+  profileSummaryAdd(x) {
+    localStorage.setItem(&#x27;candidate-profile-summary-add&#x27;, JSON.stringify(x));
+    this.router.navigate([&#x27;candidate-profile-summary-add&#x27;], { relativeTo: this.activeRouter.parent });
+  }
+
+
+  // process data to client
+
+  processToClient() {
+    const keys &#x3D; [];
+    for (const x in this.candidateIdList) {
+      if (this.candidateIdList[x]) {
+        keys.push(parseInt(x));
+      }
+    }
+    // console.log(keys);
+    this.getResumeService.insertClientProcessDetails(keys)
+      .subscribe(response &#x3D;&gt; { this.notifier.notify(&#x27;success&#x27;, response.message) });
+    // this.router.navigate([&#x27;client-details-list&#x27;], { relativeTo: this.activeRouter.parent });
+
+    //  const keys &#x3D; [];
+    //   for (let x in this.candidateIdList){
+    //     keys.push(parseInt(x))
+    //     console.log(keys);
+
+    //   }
+    //   this.candidateIdList&#x3D;[];
+  }
+
+  initateHackerrank() {
+
+    const keys &#x3D; [];
+    for (const x in this.candidateIdList) {
+      if (this.candidateIdList[x]) {
+        keys.push(parseInt(x));
+      }
+    }
+
+    this.getResumeService.initiateHackerRank(keys)
+      .subscribe(response &#x3D;&gt; { this.notifier.notify(&#x27;success&#x27;, response.message) });
+    // this.router.navigate([&#x27;client-details-list&#x27;], { relativeTo: this.activeRouter.parent });
+
+
+  }
+
+
+
+
+
+  // tableToExcel(table, EmployeeList) {
+
+  //   let uri &#x3D; &#x27;data:application/vnd.ms-excel;base64,&#x27;
+  //     , template &#x3D; &#x27;&lt;html xmlns:o&#x3D;&#x27;urn:schemas-microsoft-com:office:office&#x27; xmlns:x&#x3D;&#x27;urn:schemas-microsoft-com:office:excel&#x27; xmlns&#x3D;&#x27;http://www.w3.org/TR/REC-html40&#x27;&gt;&lt;head&gt;&lt;!--[if gte mso 9]&gt;&lt;xml&gt;&lt;x:ExcelWorkbook&gt;&lt;x:ExcelWorksheets&gt;&lt;x:ExcelWorksheet&gt;&lt;x:Name&gt;{worksheet}&lt;/x:Name&gt;&lt;x:WorksheetOptions&gt;&lt;x:DisplayGridlines/&gt;&lt;/x:WorksheetOptions&gt;&lt;/x:ExcelWorksheet&gt;&lt;/x:ExcelWorksheets&gt;&lt;/x:ExcelWorkbook&gt;&lt;/xml&gt;&lt;![endif]--&gt;&lt;meta http-equiv&#x3D;&#x27;content-type&#x27; content&#x3D;&#x27;text/plain; charset&#x3D;UTF-8&#x27;/&gt;&lt;/head&gt;&lt;body&gt;&lt;table&gt;{table}&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;&#x27;
+  //     , base64 &#x3D; function (s) { return window.btoa(decodeURIComponent(encodeURIComponent(s))) }
+  //     , format &#x3D; function (s, c) { return s.replace(/{(\w+)}/g, function (m, p) { return c[p]; }) }
+  //   if (!table.nodeType) table &#x3D; document.getElementById(table)
+  //   var ctx &#x3D; { worksheet: name || &#x27;Worksheet&#x27;, table: table.innerHTML }
+  //   window.location.href &#x3D; uri + base64(format(template, ctx));
+  // }  
+
+
+  sendEmail() {
+
+    const keys &#x3D; [];
+    for (const x in this.candidateIdList) {
+      if (this.candidateIdList[x]) {
+        keys.push(parseInt(x));
+      }
+    }
+
+    console.log(keys);
+    console.log(this.pagedItems);
+
+    const emailList &#x3D; [];
+    this.pagedItems.forEach(x &#x3D;&gt; {
+      keys.forEach(y &#x3D;&gt; {
+        if (x.id &#x3D;&#x3D; y) {
+          emailList.push(x.emailId);
+        }
+      })
+
+    });
+
+    console.log(emailList);
+
+    if (emailList.length &#x3D;&#x3D; 0) {
+      this.notifier.notify(&#x27;success&#x27;, &#x27;send  mail list cannot be empty&#x27;);
+    } else {
+      localStorage.setItem(&#x27;mail-templete&#x27;, JSON.stringify(emailList));
+      this.router.navigate([&#x27;mail-templete&#x27;], { relativeTo: this.activeRouter.parent });
+
+      this.getResumeService.sendEmail()
+        .subscribe(response &#x3D;&gt; { this.notifier.notify(&#x27;success&#x27;, response.message) });
+    }
+
+
+  }
+
+  tableToExcel(tableId) {
+    const blob &#x3D; new Blob([document.getElementById(tableId).innerText], {
+      type: &#x27;application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset&#x3D;utf-8&#x27;
+    });
+    FileSaver.saveAs(blob, &#x27;candidate.xls&#x27;);
+  }
+
+  tableToJson(tableToJson) {
+    this.excelService.exportAsExcelFile(tableToJson, &#x27;candidate.xls&#x27;);
+  }
+
+  hasRole(input: string) {
+    if (this.data.roleVo.roleName &#x3D;&#x3D;&#x3D; input) {
+      return true;
+    }
+    return false;
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;h6 class&#x3D;&quot;text-center&quot; style&#x3D;&quot;background-color: rgba(0,123,255,0.25);padding:0.2em;&quot;&gt;&lt;b&gt;{{title}}&lt;/b&gt;&lt;/h6&gt;
+&lt;div class&#x3D;&quot;container-fluid&quot;&gt;
+  &lt;div class&#x3D;&quot;card mx-auto&quot;&gt;
+    &lt;div class&#x3D;&quot;card-body&quot;&gt;
+
+
+
+      &lt;div class&#x3D;&quot;row&quot;&gt;
+        &lt;div class&#x3D;&quot;col-md-12&quot;&gt;
+          &lt;div class&#x3D;&quot;input-group input-group-sm mb-3&quot;&gt;
+            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;user&quot; placeholder&#x3D;&quot;search any field.&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- &lt;div class&#x3D;&quot;col-md-1&quot;&gt;
+          &lt;div class&#x3D;&quot;ml-auto&quot;&gt;
+            &lt;button class&#x3D;&quot;btn btn-sm btn-primary&quot; type&#x3D;&quot;submit&quot; data-toggle&#x3D;&quot;tooltip&quot; data-placement&#x3D;&quot;top&quot; title&#x3D;&quot;download to excel&quot;
+              (click)&#x3D;&quot;tableToJson(response)&quot;&gt;
+              &lt;i class&#x3D;&quot;fa fa-download&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt; --&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;table-responsive&quot;&gt;
+        &lt;table id&#x3D;&quot;candidate-table-list&quot; class&#x3D;&quot;table table-bordered table-striped table-sm&quot;&gt;
+          &lt;thead class&#x3D;&quot;thead-light&quot;&gt;
+            &lt;tr&gt;
+              &lt;th scope&#x3D;&quot;col&quot;&gt;&amp;nbsp;&lt;/th&gt;
+              &lt;th scope&#x3D;&quot;col&quot;&gt;S.No.&lt;/th&gt;
+              &lt;th scope&#x3D;&quot;col&quot;&gt;Name&lt;/th&gt;
+              &lt;th scope&#x3D;&quot;col&quot;&gt;Phone&lt;/th&gt;
+              &lt;th scope&#x3D;&quot;col&quot;&gt;Email&lt;/th&gt;
+              &lt;th scope&#x3D;&quot;col&quot;&gt;Exp Year(s)&lt;/th&gt;
+              &lt;th scope&#x3D;&quot;col&quot;&gt;Exp Month(s)&lt;/th&gt;
+              &lt;!-- &lt;th scope&#x3D;&quot;col&quot;&gt;Service Notice&lt;/th&gt; --&gt;
+              &lt;th scope&#x3D;&quot;col&quot;&gt;Role&lt;/th&gt;
+              &lt;th scope&#x3D;&quot;col&quot;&gt;Primary Skill&lt;/th&gt;
+              &lt;th scope&#x3D;&quot;col&quot;&gt;Secondary Skill&lt;/th&gt;
+              &lt;th scope&#x3D;&quot;col&quot;&gt;HackerRank Score (%)&lt;/th&gt;
+              &lt;!-- &lt;th scope&#x3D;&quot;col&quot;&gt;Interview Date&lt;/th&gt; --&gt;
+              &lt;th scope&#x3D;&quot;col&quot;&gt;Status&lt;/th&gt;
+              &lt;th scope&#x3D;&quot;col&quot;&gt;&amp;nbsp;&lt;/th&gt;
+            &lt;/tr&gt;
+
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr *ngFor&#x3D;&quot;let x of pagedItems  | 
+             tableFilter: {
+               name:user,
+               contactNo:user,
+               emailId:user,
+               expYears:user,
+               expMonths:user,
+               hclPositionRole:user,
+               primarySkill:user,
+               secondarySkill:user,
+               hackerRankScore:user,
+               status:user
+              }; 
+              let i&#x3D;index; &quot;&gt;
+              &lt;td class&#x3D;&quot;&quot; style&#x3D;&quot;text-align:center;&quot;&gt;
+                &lt;input type&#x3D;&quot;checkbox&quot; [(ngModel)]&#x3D;&quot;candidateIdList[x.id]&quot;&gt;
+              &lt;/td&gt;
+              &lt;td scope&#x3D;&quot;row&quot;&gt;{{i+1}}&lt;/td&gt;
+              &lt;td&gt;{{x?.name}}&lt;/td&gt;
+              &lt;td&gt;{{x?.contactNo}}&lt;/td&gt;
+              &lt;td&gt;{{x?.emailId}}&lt;/td&gt;
+              &lt;td&gt;{{x?.expYears}}&lt;/td&gt;
+              &lt;td&gt;{{x?.expMonths}}&lt;/td&gt;
+              &lt;!-- &lt;td&gt;{{x?.servingNoticePeriod}}&lt;/td&gt; --&gt;
+              &lt;td&gt;{{x?.hclPositionRole}}&lt;/td&gt;
+              &lt;td&gt;{{x?.primarySkill}}&lt;/td&gt;
+              &lt;td&gt;{{x?.secondarySkill}}&lt;/td&gt;
+              &lt;td&gt;{{x?.hackerRankScore}}&lt;/td&gt;
+              &lt;!-- &lt;td&gt;{{x?.interviewDateTime}}&lt;/td&gt; --&gt;
+              &lt;td&gt;{{x?.status}}&lt;/td&gt;
+              &lt;td class&#x3D;&quot;text-center&quot;&gt;
+                &lt;div class&#x3D;&quot;btn-group btn-group-sm&quot;&gt;
+                  &lt;div class&#x3D;&quot;btn-group&quot; role&#x3D;&quot;group&quot; aria-label&#x3D;&quot;operations&quot;&gt;
+
+                    &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-primary&quot; data-toggle&#x3D;&quot;tooltip&quot; data-placement&#x3D;&quot;top&quot; title&#x3D;&quot;Profile Summary Add&quot;
+                      *ngIf&#x3D;&quot;hasRole(&#x27;ADMIN&#x27;);&quot; (click)&#x3D;&quot;profileSummaryAdd(x)&quot;&gt;
+                      &lt;i class&#x3D;&quot;fa fa-plus&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;
+                    &lt;/button&gt;
+                    &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-primary&quot; data-toggle&#x3D;&quot;tooltip&quot; data-placement&#x3D;&quot;top&quot; title&#x3D;&quot;View&quot;
+                      *ngIf&#x3D;&quot;hasRole(&#x27;ADMIN&#x27;);&quot; (click)&#x3D;&quot;viewCandidateDetails(x)&quot;&gt;
+                      &lt;i class&#x3D;&quot;fa fa-eye&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;
+                    &lt;/button&gt;
+                    &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-primary&quot; data-toggle&#x3D;&quot;tooltip&quot; data-placement&#x3D;&quot;top&quot; title&#x3D;&quot;Edit&quot;
+                      *ngIf&#x3D;&quot;hasRole(&#x27;ADMIN&#x27;);&quot; (click)&#x3D;&quot;editCandidateDetails(x)&quot;&gt;
+                      &lt;i class&#x3D;&quot;fa fa-pencil-square-o&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;
+                    &lt;/button&gt;
+                    &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-primary&quot; data-toggle&#x3D;&quot;tooltip&quot; data-placement&#x3D;&quot;top&quot; title&#x3D;&quot;Upload Profile&quot;
+                      *ngIf&#x3D;&quot;hasRole(&#x27;ADMIN&#x27;);&quot; (click)&#x3D;&quot;uploadCandidateProfile(x)&quot;&gt;
+                      &lt;i class&#x3D;&quot;fa fa-upload&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;
+                    &lt;/button&gt;
+                    &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-primary&quot; data-toggle&#x3D;&quot;tooltip&quot; data-placement&#x3D;&quot;top&quot; title&#x3D;&quot;Profile Summary&quot;
+                      (click)&#x3D;&quot;ProfileSummary(x)&quot;&gt;
+                      &lt;i class&#x3D;&quot;fa fa-user&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;
+                    &lt;/button&gt;
+                    &lt;!-- &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-primary&quot; data-toggle&#x3D;&quot;tooltip&quot; data-placement&#x3D;&quot;top&quot; title&#x3D;&quot;Download Profile&quot;&gt;
+                    &lt;i class&#x3D;&quot;fa fa-download&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;
+                  &lt;/button&gt; --&gt;
+                  &lt;/div&gt;
+                  &lt;!-- &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-primary&quot; (click)&#x3D;&quot;editCandidateDetails(x)&quot;&gt;
+                    &lt;i class&#x3D;&quot;fa fa-pencil-square-o&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;
+                  &lt;/button&gt; --&gt;
+                  &lt;!-- &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-warning&quot;&gt;dele&lt;/button&gt; --&gt;
+                &lt;/div&gt;
+              &lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+
+
+        &lt;!-- pagination --&gt;
+        &lt;nav aria-label&#x3D;&quot;Page navigation example&quot;&gt;
+          &lt;ul class&#x3D;&quot;pagination&quot; *ngIf&#x3D;&quot;pager.pages &amp;&amp; pager.pages.length&quot; class&#x3D;&quot;pagination&quot;&gt;
+            &lt;!-- &lt;li class&#x3D;&quot;page-item&quot; [ngClass]&#x3D;&quot;{disabled:pager.currentPage &#x3D;&#x3D;&#x3D; 1}&quot;&gt;
+                &lt;a class&#x3D;&quot;page-link&quot; (click)&#x3D;&quot;setPage(1)&quot;&gt;First&lt;/a&gt;
+              &lt;/li&gt; --&gt;
+            &lt;li class&#x3D;&quot;page-item&quot; [ngClass]&#x3D;&quot;{disabled:pager.currentPage &#x3D;&#x3D;&#x3D; 1}&quot;&gt;
+              &lt;a class&#x3D;&quot;page-link&quot; (click)&#x3D;&quot;setPage(pager.currentPage - 1)&quot;&gt;
+                &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;laquo;&lt;/span&gt;
+                &lt;span class&#x3D;&quot;sr-only&quot;&gt;Previous&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class&#x3D;&quot;page-item&quot; *ngFor&#x3D;&quot;let page of pager.pages&quot; [ngClass]&#x3D;&quot;{active:pager.currentPage &#x3D;&#x3D;&#x3D; page}&quot;&gt;
+              &lt;a class&#x3D;&quot;page-link&quot; (click)&#x3D;&quot;setPage(page)&quot;&gt;{{page}}&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class&#x3D;&quot;page-item&quot; [ngClass]&#x3D;&quot;{disabled:pager.currentPage &#x3D;&#x3D;&#x3D; pager.totalPages}&quot;&gt;
+              &lt;a class&#x3D;&quot;page-link&quot; (click)&#x3D;&quot;setPage(pager.currentPage + 1)&quot;&gt;
+                &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;raquo;&lt;/span&gt;
+                &lt;span class&#x3D;&quot;sr-only&quot;&gt;Next&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;!-- &lt;li class&#x3D;&quot;page-item&quot; [ngClass]&#x3D;&quot;{disabled:pager.currentPage &#x3D;&#x3D;&#x3D; pager.totalPages}&quot;&gt;
+                &lt;a class&#x3D;&quot;page-link&quot; (click)&#x3D;&quot;setPage(pager.totalPages)&quot;&gt;Last&lt;/a&gt;
+              &lt;/li&gt; --&gt;
+          &lt;/ul&gt;
+        &lt;/nav&gt;
+
+      &lt;/div&gt;
+      &lt;button (click)&#x3D;&quot;initateHackerrank();&quot; class&#x3D;&quot;btn-blue&quot;&gt; Initiate Hackerrank &lt;/button&gt;
+      &amp;nbsp;
+      &lt;button (click)&#x3D;&quot;processToClient()&quot; class&#x3D;&quot;btn-blue&quot;&gt; Shortlist Profile(s) &lt;/button&gt;
+      &amp;nbsp;
+      &lt;button (click)&#x3D;&quot;sendEmail()&quot; class&#x3D;&quot;btn-blue&quot;&gt;Send Email
+      &lt;/button&gt;
+      &amp;nbsp;
+
+      &lt;button (click)&#x3D;&quot;tableToJson(response)&quot; class&#x3D;&quot;btn-blue&quot;&gt; Download &lt;/button&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./candidate-details-list.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">th,td{
+    font-size: 13px;
+}
+
+.btn-group-sm &gt; .btn, .btn-sm {
+    padding: .1rem .2rem;
+}
+
+.card{
+    border: 2px solid #80bdff;
+    box-shadow: 0px 0px 0px 0.1rem rgba(0,123,255,0.25);
+    /* box-shadow: 0px 4px 10px 0.2px rgba(0,0,0,0.2), 0px 4px 20px 0px rgba(0,0,0,0.19); */
+    box-shadow: 0px 4px 10px 0.1px rgba(0,123,255,0.2), 0px 4px 20px 0px rgba(0,123,255,0.19);
+}
+.table .thead-light th {
+    color: #495057;
+    background-color: aliceblue;
+    /* border-color: #88c1fa; */
+    border-color: lightblue;
+}
+
+.btn-primary{
+    padding: .05rem .25rem;
+    border: 1px solid;
+}
+
+.btn-blue{
+    background-color: #305d9f; 
+    color: white;
+}
+
+a {
+    cursor: pointer;
+}
+
+.form-group{
+    margin-bottom:0.3rem;
+}
+
+.form-control,.custom-select,.custom-file-input{
+    border-radius: .25rem;
+    /* height: 2em; */
+    border:1px solid #80bdff;
+}
+
+.custom-file-label{
+    border-radius: .25rem;
+    border:1px solid #80bdff;
+}
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><h6 class="text-center" style="background-color: rgba(0,123,255,0.25);padding:0.2em;"><b>{{title}}</b></h6><div class="container-fluid">  <div class="card mx-auto">    <div class="card-body">      <div class="row">        <div class="col-md-12">          <div class="input-group input-group-sm mb-3">            <input type="text" class="form-control" [(ngModel)]="user" placeholder="search any field.">          </div>        </div>        <!-- <div class="col-md-1">          <div class="ml-auto">            <button class="btn btn-sm btn-primary" type="submit" data-toggle="tooltip" data-placement="top" title="download to excel"              (click)="tableToJson(response)">              <i class="fa fa-download" aria-hidden="true"></i>            </button>          </div>        </div> -->      </div>      <div class="table-responsive">        <table id="candidate-table-list" class="table table-bordered table-striped table-sm">          <thead class="thead-light">            <tr>              <th scope="col">&nbsp;</th>              <th scope="col">S.No.</th>              <th scope="col">Name</th>              <th scope="col">Phone</th>              <th scope="col">Email</th>              <th scope="col">Exp Year(s)</th>              <th scope="col">Exp Month(s)</th>              <!-- <th scope="col">Service Notice</th> -->              <th scope="col">Role</th>              <th scope="col">Primary Skill</th>              <th scope="col">Secondary Skill</th>              <th scope="col">HackerRank Score (%)</th>              <!-- <th scope="col">Interview Date</th> -->              <th scope="col">Status</th>              <th scope="col">&nbsp;</th>            </tr>          </thead>          <tbody>            <tr *ngFor="let x of pagedItems  |              tableFilter: {               name:user,               contactNo:user,               emailId:user,               expYears:user,               expMonths:user,               hclPositionRole:user,               primarySkill:user,               secondarySkill:user,               hackerRankScore:user,               status:user              };               let i=index; ">              <td class="" style="text-align:center;">                <input type="checkbox" [(ngModel)]="candidateIdList[x.id]">              </td>              <td scope="row">{{i+1}}</td>              <td>{{x?.name}}</td>              <td>{{x?.contactNo}}</td>              <td>{{x?.emailId}}</td>              <td>{{x?.expYears}}</td>              <td>{{x?.expMonths}}</td>              <!-- <td>{{x?.servingNoticePeriod}}</td> -->              <td>{{x?.hclPositionRole}}</td>              <td>{{x?.primarySkill}}</td>              <td>{{x?.secondarySkill}}</td>              <td>{{x?.hackerRankScore}}</td>              <!-- <td>{{x?.interviewDateTime}}</td> -->              <td>{{x?.status}}</td>              <td class="text-center">                <div class="btn-group btn-group-sm">                  <div class="btn-group" role="group" aria-label="operations">                    <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Profile Summary Add"                      *ngIf="hasRole(\'ADMIN\');" (click)="profileSummaryAdd(x)">                      <i class="fa fa-plus" aria-hidden="true"></i>                    </button>                    <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="View"                      *ngIf="hasRole(\'ADMIN\');" (click)="viewCandidateDetails(x)">                      <i class="fa fa-eye" aria-hidden="true"></i>                    </button>                    <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit"                      *ngIf="hasRole(\'ADMIN\');" (click)="editCandidateDetails(x)">                      <i class="fa fa-pencil-square-o" aria-hidden="true"></i>                    </button>                    <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Upload Profile"                      *ngIf="hasRole(\'ADMIN\');" (click)="uploadCandidateProfile(x)">                      <i class="fa fa-upload" aria-hidden="true"></i>                    </button>                    <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Profile Summary"                      (click)="ProfileSummary(x)">                      <i class="fa fa-user" aria-hidden="true"></i>                    </button>                    <!-- <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Download Profile">                    <i class="fa fa-download" aria-hidden="true"></i>                  </button> -->                  </div>                  <!-- <button type="button" class="btn btn-primary" (click)="editCandidateDetails(x)">                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>                  </button> -->                  <!-- <button type="button" class="btn btn-warning">dele</button> -->                </div>              </td>            </tr>          </tbody>        </table>        <!-- pagination -->        <nav aria-label="Page navigation example">          <ul class="pagination" *ngIf="pager.pages && pager.pages.length" class="pagination">            <!-- <li class="page-item" [ngClass]="{disabled:pager.currentPage === 1}">                <a class="page-link" (click)="setPage(1)">First</a>              </li> -->            <li class="page-item" [ngClass]="{disabled:pager.currentPage === 1}">              <a class="page-link" (click)="setPage(pager.currentPage - 1)">                <span aria-hidden="true">&laquo;</span>                <span class="sr-only">Previous</span>              </a>            </li>            <li class="page-item" *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}">              <a class="page-link" (click)="setPage(page)">{{page}}</a>            </li>            <li class="page-item" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">              <a class="page-link" (click)="setPage(pager.currentPage + 1)">                <span aria-hidden="true">&raquo;</span>                <span class="sr-only">Next</span>              </a>            </li>            <!-- <li class="page-item" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">                <a class="page-link" (click)="setPage(pager.totalPages)">Last</a>              </li> -->          </ul>        </nav>      </div>      <button (click)="initateHackerrank();" class="btn-blue"> Initiate Hackerrank </button>      &nbsp;      <button (click)="processToClient()" class="btn-blue"> Shortlist Profile(s) </button>      &nbsp;      <button (click)="sendEmail()" class="btn-blue">Send Email      </button>      &nbsp;      <button (click)="tableToJson(response)" class="btn-blue"> Download </button>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AdminHomeComponent', 'selector': 'app-admin-home'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BatchResumeDataComponent', 'selector': 'app-batch-resume-data'},{'name': 'CandidateDetailsListComponent', 'selector': 'app-candidate-details-list'},{'name': 'CandidateProfileSummaryAddComponent', 'selector': 'app-candidate-profile-summary-add'},{'name': 'CandidateProfileSummaryComponent', 'selector': 'app-candidate-profile-summary'},{'name': 'ClientDetailsListComponent', 'selector': 'app-client-details-list'},{'name': 'ClientDetailsUpdateComponent', 'selector': 'app-client-details-update'},{'name': 'CustomerHomeComponent', 'selector': 'app-customer-home'},{'name': 'DmuDetailsAddComponent', 'selector': 'app-dmu-details-add'},{'name': 'DmuDetailsSearchComponent', 'selector': 'app-dmu-details-search'},{'name': 'GetResumeDataComponent', 'selector': 'app-get-resume-data'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MailTempleteComponent', 'selector': 'app-mail-templete'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NotFoundComponent', 'selector': 'app-not-found'},{'name': 'PaginationComponent', 'selector': 'app-pagination'},{'name': 'SowPessSearchComponent', 'selector': 'app-sow-pess-search'},{'name': 'SowPessUpdateComponent', 'selector': 'app-sow-pess-update'},{'name': 'UpdateCandidateDetailsComponent', 'selector': 'app-update-candidate-details'},{'name': 'UploadCandidateProfileComponent', 'selector': 'app-upload-candidate-profile'},{'name': 'ViewCandidateDetailsComponent', 'selector': 'app-view-candidate-details'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'CandidateDetailsListComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'CandidateDetailsListComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

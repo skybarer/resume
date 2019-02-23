@@ -1,0 +1,4 @@
+.form-control, .custom-select, .custom-file-input  {
+    border-radius: .25rem;
+    border: 1px solid #80bdff;
+}

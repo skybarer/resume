@@ -1,0 +1,1105 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>resume documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">resume documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>ViewCandidateDetailsComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/view-candidate-details/view-candidate-details.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-view-candidate-details</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./view-candidate-details.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./view-candidate-details.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#data">data</a>
+                            </li>
+                            <li>
+                                <a href="#formLable">formLable</a>
+                            </li>
+                            <li>
+                                <a href="#headerDetails">headerDetails</a>
+                            </li>
+                            <li>
+                                <a href="#response">response</a>
+                            </li>
+                            <li>
+                                <a href="#rf">rf</a>
+                            </li>
+                            <li>
+                                <a href="#submitted">submitted</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#f">f</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(formBuilder: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>, getResumeService: <a href="../injectables/GetResumeService.html">GetResumeService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/view-candidate-details/view-candidate-details.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>formBuilder</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>getResumeService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/GetResumeService.html" target="_self" >GetResumeService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnInit"></a>
+                        <span class="name">
+                            <b>
+                            ngOnInit
+                            </b>
+                            <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ngOnInit()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/view-candidate-details/view-candidate-details.component.ts:31</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="data"></a>
+                        <span class="name">
+                            <b>
+                            data
+                            </b>
+                            <a href="#data"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>data:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/view-candidate-details/view-candidate-details.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="formLable"></a>
+                        <span class="name">
+                            <b>
+                            formLable
+                            </b>
+                            <a href="#formLable"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>formLable:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;upload your resume(.docx,.pdf)&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/view-candidate-details/view-candidate-details.component.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="headerDetails"></a>
+                        <span class="name">
+                            <b>
+                            headerDetails
+                            </b>
+                            <a href="#headerDetails"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>headerDetails:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;View Candidate Details&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/view-candidate-details/view-candidate-details.component.ts:13</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="response"></a>
+                        <span class="name">
+                            <b>
+                            response
+                            </b>
+                            <a href="#response"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>response:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/view-candidate-details/view-candidate-details.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="rf"></a>
+                        <span class="name">
+                            <b>
+                            rf
+                            </b>
+                            <a href="#rf"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>rf:     <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/view-candidate-details/view-candidate-details.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="submitted"></a>
+                        <span class="name">
+                            <b>
+                            submitted
+                            </b>
+                            <a href="#submitted"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>submitted:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/view-candidate-details/view-candidate-details.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="f"></a>
+                        <span class="name"><b>f</b><a href="#f"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>f()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="72" class="link-to-prism">src/app/view-candidate-details/view-candidate-details.component.ts:72</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, ViewChild } from &#x27;@angular/core&#x27;;
+import { Validators, FormGroup, FormBuilder } from &#x27;@angular/forms&#x27;;
+import { GetResumeService } from &#x27;../get-resume-data/get-resume.service&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+
+@Component({
+  selector: &#x27;app-view-candidate-details&#x27;,
+  templateUrl: &#x27;./view-candidate-details.component.html&#x27;,
+  styleUrls: [&#x27;./view-candidate-details.component.css&#x27;]
+})
+export class ViewCandidateDetailsComponent implements OnInit {
+
+  headerDetails &#x3D; &#x27;View Candidate Details&#x27;;
+  formLable &#x3D; &#x27;upload your resume(.docx,.pdf)&#x27;;
+  rf: FormGroup;
+  submitted: boolean &#x3D; false;
+  response: any;
+  data: any;
+
+
+  constructor(
+    private formBuilder: FormBuilder,
+    private getResumeService: GetResumeService,
+    private router: Router
+  ) {
+    this.data &#x3D; localStorage.getItem(&#x27;view-candidate-details&#x27;);
+    this.data &#x3D; JSON.parse(this.data);
+
+  }
+
+  ngOnInit() {
+    const EMAIL_REGEX &#x3D; &#x27;^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$&#x27;;
+
+    this.rf &#x3D; this.formBuilder.group({
+      name: [{ value: &#x27;&#x27;, disabled: true }, [Validators.required, Validators.minLength(3)]],
+      contactNo: [{ value: 0, disabled: true }, [Validators.required, Validators.minLength(10), Validators.maxLength(10), Validators.pattern(/^\d*$/)]],
+      alternateContactNo: [{ value: 0, disabled: true }, [Validators.required, Validators.minLength(10), Validators.maxLength(10), Validators.pattern(/^\d*$/)]],
+      emailId: [{ value: &#x27;&#x27;, disabled: true }, [Validators.required, Validators.pattern(EMAIL_REGEX)]],
+      skillSet: [{ value: &#x27;&#x27;, disabled: true }, [Validators.required]],
+      noticePeriod: [{ value: &#x27;&#x27;, disabled: true }, [Validators.required]],
+      servingNoticePeriod: [{ value: &#x27;&#x27;, disabled: true }, [Validators.required]],
+      currentCompany: [{ value: &#x27;&#x27;, disabled: true }, [Validators.required]],
+      hrContactPerson: [{ value: &#x27;&#x27;, disabled: true }, [Validators.required]],
+      experience: [{ value: &#x27;&#x27;, disabled: true }, [Validators.required]],
+      designation: [{ value: &#x27;&#x27;, disabled: true }, [Validators.required]],
+      hclPositionRole: [{ value: &#x27;&#x27;, disabled: true }, [Validators.required]],
+      referedBy: [{ value: &#x27;&#x27;, disabled: true }, [Validators.required]],
+      modeOfInterview: [{ value: &#x27;&#x27;, disabled: true }, [Validators.required]],
+      interviewDateTime: [{ value: &#x27;&#x27;, disabled: true }, Validators],
+      currentCTC: [{ value: &#x27;&#x27;, disabled: true }, [Validators.required]],
+      expectedCTC: [{ value: &#x27;&#x27;, disabled: true }, [Validators.required]],
+      status: [{ value: &#x27;&#x27;, disabled: true }, [Validators.required]],
+      comments: [{ value: &#x27;&#x27;, disabled: true }, [Validators.required]],
+      // hidden input feilds
+      createdBy: [{ value: &#x27;&#x27;, disabled: true }, Validators],
+      createdDate: [{ value: &#x27;&#x27;, disabled: true }, Validators],
+      modifiedBy: [{ value: &#x27;&#x27;, disabled: true }, Validators],
+      ModifiedDate: [{ value: &#x27;&#x27;, disabled: true }, Validators],
+      version: [0, Validators],
+      id: [0, Validators]
+    });
+
+    // passing mock data to the candidate form
+
+    this.rf.patchValue(this.data);
+
+
+
+  }
+
+  // convenience getter for easy access to form fields
+  get f() { return this.rf.controls; }
+
+
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;!-- &lt;br&gt; --&gt;
+&lt;h6 class&#x3D;&quot;text-center&quot; style&#x3D;&quot;background-color: rgba(0,123,255,0.25);padding:0.2em;&quot;&gt;&lt;b&gt;{{headerDetails}}&lt;/b&gt;&lt;/h6&gt;
+&lt;div class&#x3D;&quot;container&quot;&gt;
+  &lt;div class&#x3D;&quot;card mx-auto&quot;&gt;
+    &lt;div class&#x3D;&quot;card-body&quot;&gt;
+
+      &lt;!-- 
+      &lt;div class&#x3D;&quot;row&quot;&gt;
+        &lt;div class&#x3D;&quot;col-md-1 ml-auto&quot;&gt;
+
+          &lt;div class&#x3D;&quot;dropdown dropright&quot;&gt;
+            &lt;div class&#x3D;&quot;dropdown-toggle&quot; data-toggle&#x3D;&quot;dropdown&quot;&gt;
+              &lt;i class&#x3D;&quot;fa fa-cog&quot; aria-hidden&#x3D;&quot;true&quot; style&#x3D;&quot;float:right;cursor:pointer&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;dropdown-menu&quot;&gt;
+              &lt;a class&#x3D;&quot;dropdown-item&quot; href&#x3D;&quot;#&quot;&gt;update&lt;/a&gt;
+              &lt;a class&#x3D;&quot;dropdown-item&quot; href&#x3D;&quot;#&quot;&gt;Link 2&lt;/a&gt;
+              &lt;a class&#x3D;&quot;dropdown-item&quot; href&#x3D;&quot;#&quot;&gt;Link 3&lt;/a&gt;
+            &lt;/div&gt;  
+          &lt;/div&gt;
+
+        &lt;/div&gt;
+      &lt;/div&gt; --&gt;
+
+
+
+      &lt;form [formGroup]&#x3D;&quot;rf&quot;&gt;
+
+        &lt;div class&#x3D;&quot;row&quot;&gt;
+
+          &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
+            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+              &lt;label for&#x3D;&quot;name&quot;&gt;Name&lt;/label&gt;
+              &lt;input type&#x3D;&quot;text&quot; formControlName&#x3D;&quot;name&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;Enter Name&quot; autocomplete&#x3D;&quot;off&quot;
+                [ngClass]&#x3D;&quot;{ &#x27;is-invalid&#x27;: submitted &amp;&amp; f.name.errors }&quot;&gt;
+              &lt;!-- Error Handling  --&gt;
+              &lt;div *ngIf&#x3D;&quot;submitted &amp;&amp; f.name.errors&quot; class&#x3D;&quot;invalid-feedback&quot;&gt;
+                &lt;div *ngIf&#x3D;&quot;f.name.errors.required&quot;&gt;First Name is required&lt;/div&gt;
+                &lt;div *ngIf&#x3D;&quot;f.name.errors.minLength&quot;&gt;First Name min length should be greater than 3&lt;/div&gt;
+              &lt;/div&gt;
+
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
+            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+              &lt;label for&#x3D;&quot;contactNo&quot;&gt;Contact Number&lt;/label&gt;
+              &lt;input type&#x3D;&quot;text&quot; formControlName&#x3D;&quot;contactNo&quot; class&#x3D;&quot;form-control&quot; autocomplete&#x3D;&quot;off&quot; placeholder&#x3D;&quot;Enter Contact Number&quot;
+                [ngClass]&#x3D;&quot;{ &#x27;is-invalid&#x27;: submitted &amp;&amp; f.contactNo.errors }&quot;&gt;
+              &lt;!-- Error Handling  --&gt;
+              &lt;div *ngIf&#x3D;&quot;submitted &amp;&amp; f.contactNo.errors&quot; class&#x3D;&quot;invalid-feedback&quot;&gt;
+                &lt;div *ngIf&#x3D;&quot;f.contactNo.errors.required&quot;&gt;Contact Number is required&lt;/div&gt;
+                &lt;div *ngIf&#x3D;&quot;f.contactNo.errors.minlength&quot;&gt;Contact Number min length should be 10&lt;/div&gt;
+                &lt;div *ngIf&#x3D;&quot;f.contactNo.errors.maxlength&quot;&gt;Contact Number max length should be 10&lt;/div&gt;
+                &lt;div *ngIf&#x3D;&quot;f.contactNo.errors.pattern&quot;&gt;Contact Number should be a digit&lt;/div&gt;
+              &lt;/div&gt;
+
+            &lt;/div&gt;  
+          &lt;/div&gt;
+
+          &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
+            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+              &lt;label for&#x3D;&quot;alternateContactNo&quot;&gt;Alternate Number&lt;/label&gt;
+              &lt;input type&#x3D;&quot;number&quot; formControlName&#x3D;&quot;alternateContactNo&quot; class&#x3D;&quot;form-control&quot; autocomplete&#x3D;&quot;off&quot;
+                placeholder&#x3D;&quot;Enter Alternate Number&quot; [ngClass]&#x3D;&quot;{ &#x27;is-invalid&#x27;: submitted &amp;&amp; f.alternateContactNo.errors }&quot;&gt;
+              &lt;!-- Error Handling  --&gt;
+              &lt;div *ngIf&#x3D;&quot;submitted &amp;&amp; f.alternateContactNo.errors&quot; class&#x3D;&quot;invalid-feedback&quot;&gt;
+                &lt;div *ngIf&#x3D;&quot;f.alternateContactNo.errors.required&quot;&gt;Alternate Number is required&lt;/div&gt;
+                &lt;div *ngIf&#x3D;&quot;f.alternateContactNo.errors.minlength&quot;&gt;Alternate Number min length should be 10&lt;/div&gt;
+                &lt;div *ngIf&#x3D;&quot;f.alternateContactNo.errors.maxlength&quot;&gt;Alternate Number max length should be 10&lt;/div&gt;
+                &lt;div *ngIf&#x3D;&quot;f.alternateContactNo.errors.pattern&quot;&gt;Alternate Number should be a digit&lt;/div&gt;
+              &lt;/div&gt;
+
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class&#x3D;&quot;row&quot;&gt;
+          &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
+            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+              &lt;label for&#x3D;&quot;emailId&quot;&gt;Email Id&lt;/label&gt;
+              &lt;input type&#x3D;&quot;email&quot; formControlName&#x3D;&quot;emailId&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;Enter your valid email&quot;
+                autocomplete&#x3D;&quot;off&quot; [ngClass]&#x3D;&quot;{ &#x27;is-invalid&#x27;: submitted &amp;&amp; f.emailId.errors }&quot;&gt;
+              &lt;!-- Error Handling  --&gt;
+              &lt;div *ngIf&#x3D;&quot;submitted &amp;&amp; f.emailId.errors&quot; class&#x3D;&quot;invalid-feedback&quot;&gt;
+                &lt;div *ngIf&#x3D;&quot;f.emailId.errors.required&quot;&gt;Email Id is required&lt;/div&gt;
+                &lt;!-- &lt;div *ngIf&#x3D;&quot;f.emailId.errors.email&quot;&gt;Email format is invalid&lt;/div&gt; --&gt;
+                &lt;div *ngIf&#x3D;&quot;f.emailId.errors.pattern&quot;&gt;Email format is invalid&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
+            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+              &lt;label for&#x3D;&quot;skillSet&quot;&gt;Skill Set&lt;/label&gt;
+              &lt;input type&#x3D;&quot;text&quot; formControlName&#x3D;&quot;skillSet&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;Enter your skill set&quot;
+                autocomplete&#x3D;&quot;off&quot; [ngClass]&#x3D;&quot;{ &#x27;is-invalid&#x27;: submitted &amp;&amp; f.skillSet.errors }&quot;&gt;
+              &lt;!-- Error Handling  --&gt;
+              &lt;div *ngIf&#x3D;&quot;submitted &amp;&amp; f.skillSet.errors&quot; class&#x3D;&quot;invalid-feedback&quot;&gt;
+                &lt;div *ngIf&#x3D;&quot;f.skillSet.errors.required&quot;&gt;Skill Set is required&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
+            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+              &lt;label for&#x3D;&quot;noticePeriod&quot;&gt;Notice Period&lt;/label&gt;
+              &lt;input type&#x3D;&quot;text&quot; formControlName&#x3D;&quot;noticePeriod&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;Enter your Notice Period&quot;
+                autocomplete&#x3D;&quot;off&quot; [ngClass]&#x3D;&quot;{ &#x27;is-invalid&#x27;: submitted &amp;&amp; f.noticePeriod.errors }&quot;&gt;
+              &lt;!-- Error Handling  --&gt;
+              &lt;div *ngIf&#x3D;&quot;submitted &amp;&amp; f.noticePeriod.errors&quot; class&#x3D;&quot;invalid-feedback&quot;&gt;
+                &lt;div *ngIf&#x3D;&quot;f.noticePeriod.errors.required&quot;&gt;Notice Period is required&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class&#x3D;&quot;row&quot;&gt;
+          &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
+            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+              &lt;label for&#x3D;&quot;servingNoticePeriod&quot;&gt;Serving Notice Period&lt;/label&gt;
+              &lt;select class&#x3D;&quot;custom-select&quot; formControlName&#x3D;&quot;servingNoticePeriod&quot; [ngClass]&#x3D;&quot;{ &#x27;is-invalid&#x27;: submitted &amp;&amp; f.servingNoticePeriod.errors }&quot;&gt;
+                &lt;!-- &lt;option selected&#x3D;&quot;selected&quot;&gt;Select Yes or No&lt;/option&gt; --&gt;
+                &lt;option value&#x3D;&quot;Y&quot;&gt;Yes&lt;/option&gt;
+                &lt;option value&#x3D;&quot;N&quot;&gt;No&lt;/option&gt;
+              &lt;/select&gt;
+              &lt;!-- &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;Enter your Serving Notice Period &quot; autocomplete&#x3D;&quot;off&quot; [ngClass]&#x3D;&quot;{ &#x27;is-invalid&#x27;: submitted &amp;&amp; f.servingNoticePeriod.errors }&quot;&gt; --&gt;
+              &lt;!-- Error Handling  --&gt;
+              &lt;div *ngIf&#x3D;&quot;submitted &amp;&amp; f.servingNoticePeriod.errors&quot; class&#x3D;&quot;invalid-feedback&quot;&gt;
+                &lt;div *ngIf&#x3D;&quot;f.servingNoticePeriod.errors.required&quot;&gt;Serving Notice is required&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
+            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+              &lt;label for&#x3D;&quot;currentCompany&quot;&gt;Current Company&lt;/label&gt;
+              &lt;input type&#x3D;&quot;text&quot; formControlName&#x3D;&quot;currentCompany&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;Enter your Current Company&quot;
+                autocomplete&#x3D;&quot;off&quot; [ngClass]&#x3D;&quot;{ &#x27;is-invalid&#x27;: submitted &amp;&amp; f.currentCompany.errors }&quot;&gt;
+              &lt;!-- Error Handling  --&gt;
+              &lt;div *ngIf&#x3D;&quot;submitted &amp;&amp; f.currentCompany.errors&quot; class&#x3D;&quot;invalid-feedback&quot;&gt;
+                &lt;div *ngIf&#x3D;&quot;f.currentCompany.errors.required&quot;&gt;Current Company is required&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
+            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+              &lt;label for&#x3D;&quot;hrContactPerson&quot;&gt;HR Contact Person&lt;/label&gt;
+              &lt;input type&#x3D;&quot;text&quot; formControlName&#x3D;&quot;hrContactPerson&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;Enter your HR Contact Person &quot;
+                autocomplete&#x3D;&quot;off&quot; [ngClass]&#x3D;&quot;{ &#x27;is-invalid&#x27;: submitted &amp;&amp; f.hrContactPerson.errors }&quot;&gt;
+              &lt;!-- Error Handling  --&gt;
+              &lt;div *ngIf&#x3D;&quot;submitted &amp;&amp; f.hrContactPerson.errors&quot; class&#x3D;&quot;invalid-feedback&quot;&gt;
+                &lt;div *ngIf&#x3D;&quot;f.hrContactPerson.errors.required&quot;&gt;HR Contact Person is required&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class&#x3D;&quot;row&quot;&gt;
+          &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
+            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+              &lt;label for&#x3D;&quot;experience&quot;&gt;Experience&lt;/label&gt;
+              &lt;input type&#x3D;&quot;text&quot; formControlName&#x3D;&quot;experience&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;Enter your Experience &quot;
+                autocomplete&#x3D;&quot;off&quot; [ngClass]&#x3D;&quot;{ &#x27;is-invalid&#x27;: submitted &amp;&amp; f.experience.errors }&quot;&gt;
+              &lt;!-- Error Handling  --&gt;
+              &lt;div *ngIf&#x3D;&quot;submitted &amp;&amp; f.experience.errors&quot; class&#x3D;&quot;invalid-feedback&quot;&gt;
+                &lt;div *ngIf&#x3D;&quot;f.experience.errors.required&quot;&gt;Experience is required&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
+            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+              &lt;label for&#x3D;&quot;designation&quot;&gt;Designation&lt;/label&gt;
+              &lt;input type&#x3D;&quot;text&quot; formControlName&#x3D;&quot;designation&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;Enter your Designation&quot;
+                autocomplete&#x3D;&quot;off&quot; [ngClass]&#x3D;&quot;{ &#x27;is-invalid&#x27;: submitted &amp;&amp; f.designation.errors }&quot;&gt;
+              &lt;!-- Error Handling  --&gt;
+              &lt;div *ngIf&#x3D;&quot;submitted &amp;&amp; f.designation.errors&quot; class&#x3D;&quot;invalid-feedback&quot;&gt;
+                &lt;div *ngIf&#x3D;&quot;f.designation.errors.required&quot;&gt;Designation is required&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
+            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+              &lt;label for&#x3D;&quot;hclPositionRole&quot;&gt;HCL Position (Role)&lt;/label&gt;
+              &lt;input type&#x3D;&quot;text&quot; formControlName&#x3D;&quot;hclPositionRole&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;Enter your HCL Position (Role)&quot;
+                autocomplete&#x3D;&quot;off&quot; [ngClass]&#x3D;&quot;{ &#x27;is-invalid&#x27;: submitted &amp;&amp; f.hclPositionRole.errors }&quot;&gt;
+              &lt;!-- Error Handling  --&gt;
+              &lt;div *ngIf&#x3D;&quot;submitted &amp;&amp; f.hclPositionRole.errors&quot; class&#x3D;&quot;invalid-feedback&quot;&gt;
+                &lt;div *ngIf&#x3D;&quot;f.hclPositionRole.errors.required&quot;&gt;HCL Position is required&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class&#x3D;&quot;row&quot;&gt;
+          &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
+            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+              &lt;label for&#x3D;&quot;referedBy&quot;&gt;Referred By&lt;/label&gt;
+              &lt;input type&#x3D;&quot;text&quot; formControlName&#x3D;&quot;referedBy&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;Enter your Referred By &quot;
+                autocomplete&#x3D;&quot;off&quot; [ngClass]&#x3D;&quot;{ &#x27;is-invalid&#x27;: submitted &amp;&amp; f.referedBy.errors }&quot;&gt;
+              &lt;!-- Error Handling  --&gt;
+              &lt;div *ngIf&#x3D;&quot;submitted &amp;&amp; f.referedBy.errors&quot; class&#x3D;&quot;invalid-feedback&quot;&gt;
+                &lt;div *ngIf&#x3D;&quot;f.referedBy.errors.required&quot;&gt;Referred By is required&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
+            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+              &lt;label for&#x3D;&quot;modeOfInterview&quot;&gt;Mode Of Interview&lt;/label&gt;
+              &lt;input type&#x3D;&quot;text&quot; formControlName&#x3D;&quot;modeOfInterview&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;Enter your Mode Of Interview &quot;
+                autocomplete&#x3D;&quot;off&quot; [ngClass]&#x3D;&quot;{ &#x27;is-invalid&#x27;: submitted &amp;&amp; f.modeOfInterview.errors }&quot;&gt;
+            
+              &lt;div *ngIf&#x3D;&quot;submitted &amp;&amp; f.modeOfInterview.errors&quot; class&#x3D;&quot;invalid-feedback&quot;&gt;
+                &lt;div *ngIf&#x3D;&quot;f.modeOfInterview.errors.required&quot;&gt;Mode Of Interview is required&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
+            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+              &lt;label for&#x3D;&quot;interviewDateTime&quot;&gt;Interview Date&lt;/label&gt;
+              &lt;input type&#x3D;&quot;text&quot; formControlName&#x3D;&quot;interviewDateTime&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;Enter your Interview Date Time &quot;
+                autocomplete&#x3D;&quot;off&quot; [ngClass]&#x3D;&quot;{ &#x27;is-invalid&#x27;: submitted &amp;&amp; f.interviewDateTime.errors }&quot;&gt;
+              &lt;!-- Error Handling  --&gt;
+              &lt;div *ngIf&#x3D;&quot;submitted &amp;&amp; f.interviewDateTime.errors&quot; class&#x3D;&quot;invalid-feedback&quot;&gt;
+                &lt;div *ngIf&#x3D;&quot;f.interviewDateTime.errors.required&quot;&gt;Interview Date Time is required&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class&#x3D;&quot;row&quot;&gt;
+          &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
+            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+              &lt;label for&#x3D;&quot;currentCTC&quot;&gt;Current CTC&lt;/label&gt;
+              &lt;input type&#x3D;&quot;text&quot; formControlName&#x3D;&quot;currentCTC&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;Enter your Current CTC&quot;
+                autocomplete&#x3D;&quot;off&quot; [ngClass]&#x3D;&quot;{ &#x27;is-invalid&#x27;: submitted &amp;&amp; f.currentCTC.errors }&quot;&gt;
+              &lt;!-- Error Handling  --&gt;
+              &lt;div *ngIf&#x3D;&quot;submitted &amp;&amp; f.currentCTC.errors&quot; class&#x3D;&quot;invalid-feedback&quot;&gt;
+                &lt;div *ngIf&#x3D;&quot;f.currentCTC.errors.required&quot;&gt;Current CTC is required&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
+            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+              &lt;label for&#x3D;&quot;expectedCTC&quot;&gt;Expected CTC&lt;/label&gt;
+              &lt;input type&#x3D;&quot;text&quot; formControlName&#x3D;&quot;expectedCTC&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;Enter your &quot;
+                autocomplete&#x3D;&quot;off&quot; [ngClass]&#x3D;&quot;{ &#x27;is-invalid&#x27;: submitted &amp;&amp; f.expectedCTC.errors }&quot;&gt;
+              &lt;!-- Error Handling  --&gt;
+              &lt;div *ngIf&#x3D;&quot;submitted &amp;&amp; f.expectedCTC.errors&quot; class&#x3D;&quot;invalid-feedback&quot;&gt;
+                &lt;div *ngIf&#x3D;&quot;f.expectedCTC.errors.required&quot;&gt;Expected CTC is required&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
+            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+              &lt;label for&#x3D;&quot;status&quot;&gt;Status&lt;/label&gt;
+              &lt;select class&#x3D;&quot;custom-select&quot; formControlName&#x3D;&quot;status&quot; [ngClass]&#x3D;&quot;{ &#x27;is-invalid&#x27;: submitted &amp;&amp; f.status.errors }&quot;&gt;
+                &lt;!-- &lt;option selected&#x3D;&quot;selected&quot;&gt;Select Status&lt;/option&gt; --&gt;
+                &lt;option value&#x3D;&quot;new&quot;&gt;New&lt;/option&gt;
+                &lt;option value&#x3D;&quot;selected&quot;&gt;Selected&lt;/option&gt;
+                &lt;option value&#x3D;&quot;rejected&quot;&gt;Rejected&lt;/option&gt;
+                &lt;option value&#x3D;&quot;hold&quot;&gt;Hold&lt;/option&gt;
+                &lt;option value&#x3D;&quot;progress&quot;&gt;Progress&lt;/option&gt;
+              &lt;/select&gt;
+              &lt;!-- &lt;input type&#x3D;&quot;text&quot; formControlName&#x3D;&quot;status&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;Enter your &quot; autocomplete&#x3D;&quot;off&quot;
+                [ngClass]&#x3D;&quot;{ &#x27;is-invalid&#x27;: submitted &amp;&amp; f.status.errors }&quot;&gt; --&gt;
+              &lt;!-- Error Handling  --&gt;
+              &lt;div *ngIf&#x3D;&quot;submitted &amp;&amp; f.status.errors&quot; class&#x3D;&quot;invalid-feedback&quot;&gt;
+                &lt;div *ngIf&#x3D;&quot;f.status.errors.required&quot;&gt;Status is required&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class&#x3D;&quot;row&quot;&gt;
+          &lt;div class&#x3D;&quot;col-md-12&quot;&gt;
+            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+              &lt;label for&#x3D;&quot;comments&quot;&gt;HackerRank Score (%) and Comments&lt;/label&gt;
+              &lt;textarea formControlName&#x3D;&quot;comments&quot; class&#x3D;&quot;form-control&quot; rows&#x3D;&quot;1&quot; autocomplete&#x3D;&quot;off&quot; [ngClass]&#x3D;&quot;{ &#x27;is-invalid&#x27;: submitted &amp;&amp; f.status.errors }&quot;&gt;&lt;/textarea&gt;
+              &lt;!-- Error Handling  --&gt;
+              &lt;div *ngIf&#x3D;&quot;submitted &amp;&amp; f.comments.errors&quot; class&#x3D;&quot;invalid-feedback&quot;&gt;
+                &lt;div *ngIf&#x3D;&quot;f.comments.errors.required&quot;&gt;Comments are required&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+      &lt;/form&gt;
+
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./view-candidate-details.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.dropright .dropdown-toggle::after{
+    display: none;
+}
+
+/* .form-control {
+    display: block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: 0.150rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+} */
+
+.form-group{
+    margin-bottom:0.3rem;
+}
+
+.form-control,.custom-select,.custom-file-input{
+    border-radius: .25rem;
+    /* height: 2em; */
+    border:1px solid #80bdff;
+}
+
+.custom-file-label{
+    border-radius: .25rem;
+    border:1px solid #80bdff;
+}
+
+label{  
+    color: #305d9f;
+    margin-bottom: 0.2rem;
+    font-size: 14px;
+}
+.card{
+    border: 1px solid #80bdff;
+    box-shadow: 0px 0px 0px 0.2rem rgba(0,123,255,0.25);
+    /* box-shadow: 0px 4px 10px 0.2px rgba(0,0,0,0.2), 0px 4px 20px 0px rgba(0,0,0,0.19); */
+    box-shadow: 0px 4px 10px 0.4px rgba(0,123,255,0.2), 0px 4px 20px 0px rgba(0,123,255,0.19);
+}
+
+.invalid-feedback {
+    margin-top: 0.20rem;
+    font-size: 78%;
+}
+
+ 
+ /* Overriding styles */
+ 
+ input::-webkit-input-placeholder {
+    font-size: 13px!important;
+ }
+ 
+ input:-moz-placeholder { /* Firefox 18- */
+       font-size: 13px!important;
+ }
+ input::-moz-placeholder {  /* Firefox 19+ */
+       font-size: 13px!important;
+ }
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><!-- <br> --><h6 class="text-center" style="background-color: rgba(0,123,255,0.25);padding:0.2em;"><b>{{headerDetails}}</b></h6><div class="container">  <div class="card mx-auto">    <div class="card-body">      <!--       <div class="row">        <div class="col-md-1 ml-auto">          <div class="dropdown dropright">            <div class="dropdown-toggle" data-toggle="dropdown">              <i class="fa fa-cog" aria-hidden="true" style="float:right;cursor:pointer"></i>            </div>            <div class="dropdown-menu">              <a class="dropdown-item" href="#">update</a>              <a class="dropdown-item" href="#">Link 2</a>              <a class="dropdown-item" href="#">Link 3</a>            </div>            </div>        </div>      </div> -->      <form [formGroup]="rf">        <div class="row">          <div class="col-md-4">            <div class="form-group">              <label for="name">Name</label>              <input type="text" formControlName="name" class="form-control" placeholder="Enter Name" autocomplete="off"                [ngClass]="{ \'is-invalid\': submitted && f.name.errors }">              <!-- Error Handling  -->              <div *ngIf="submitted && f.name.errors" class="invalid-feedback">                <div *ngIf="f.name.errors.required">First Name is required</div>                <div *ngIf="f.name.errors.minLength">First Name min length should be greater than 3</div>              </div>            </div>          </div>          <div class="col-md-4">            <div class="form-group">              <label for="contactNo">Contact Number</label>              <input type="text" formControlName="contactNo" class="form-control" autocomplete="off" placeholder="Enter Contact Number"                [ngClass]="{ \'is-invalid\': submitted && f.contactNo.errors }">              <!-- Error Handling  -->              <div *ngIf="submitted && f.contactNo.errors" class="invalid-feedback">                <div *ngIf="f.contactNo.errors.required">Contact Number is required</div>                <div *ngIf="f.contactNo.errors.minlength">Contact Number min length should be 10</div>                <div *ngIf="f.contactNo.errors.maxlength">Contact Number max length should be 10</div>                <div *ngIf="f.contactNo.errors.pattern">Contact Number should be a digit</div>              </div>            </div>            </div>          <div class="col-md-4">            <div class="form-group">              <label for="alternateContactNo">Alternate Number</label>              <input type="number" formControlName="alternateContactNo" class="form-control" autocomplete="off"                placeholder="Enter Alternate Number" [ngClass]="{ \'is-invalid\': submitted && f.alternateContactNo.errors }">              <!-- Error Handling  -->              <div *ngIf="submitted && f.alternateContactNo.errors" class="invalid-feedback">                <div *ngIf="f.alternateContactNo.errors.required">Alternate Number is required</div>                <div *ngIf="f.alternateContactNo.errors.minlength">Alternate Number min length should be 10</div>                <div *ngIf="f.alternateContactNo.errors.maxlength">Alternate Number max length should be 10</div>                <div *ngIf="f.alternateContactNo.errors.pattern">Alternate Number should be a digit</div>              </div>            </div>          </div>        </div>        <div class="row">          <div class="col-md-4">            <div class="form-group">              <label for="emailId">Email Id</label>              <input type="email" formControlName="emailId" class="form-control" placeholder="Enter your valid email"                autocomplete="off" [ngClass]="{ \'is-invalid\': submitted && f.emailId.errors }">              <!-- Error Handling  -->              <div *ngIf="submitted && f.emailId.errors" class="invalid-feedback">                <div *ngIf="f.emailId.errors.required">Email Id is required</div>                <!-- <div *ngIf="f.emailId.errors.email">Email format is invalid</div> -->                <div *ngIf="f.emailId.errors.pattern">Email format is invalid</div>              </div>            </div>          </div>          <div class="col-md-4">            <div class="form-group">              <label for="skillSet">Skill Set</label>              <input type="text" formControlName="skillSet" class="form-control" placeholder="Enter your skill set"                autocomplete="off" [ngClass]="{ \'is-invalid\': submitted && f.skillSet.errors }">              <!-- Error Handling  -->              <div *ngIf="submitted && f.skillSet.errors" class="invalid-feedback">                <div *ngIf="f.skillSet.errors.required">Skill Set is required</div>              </div>            </div>          </div>          <div class="col-md-4">            <div class="form-group">              <label for="noticePeriod">Notice Period</label>              <input type="text" formControlName="noticePeriod" class="form-control" placeholder="Enter your Notice Period"                autocomplete="off" [ngClass]="{ \'is-invalid\': submitted && f.noticePeriod.errors }">              <!-- Error Handling  -->              <div *ngIf="submitted && f.noticePeriod.errors" class="invalid-feedback">                <div *ngIf="f.noticePeriod.errors.required">Notice Period is required</div>              </div>            </div>          </div>        </div>        <div class="row">          <div class="col-md-4">            <div class="form-group">              <label for="servingNoticePeriod">Serving Notice Period</label>              <select class="custom-select" formControlName="servingNoticePeriod" [ngClass]="{ \'is-invalid\': submitted && f.servingNoticePeriod.errors }">                <!-- <option selected="selected">Select Yes or No</option> -->                <option value="Y">Yes</option>                <option value="N">No</option>              </select>              <!-- <input type="text" class="form-control" placeholder="Enter your Serving Notice Period " autocomplete="off" [ngClass]="{ \'is-invalid\': submitted && f.servingNoticePeriod.errors }"> -->              <!-- Error Handling  -->              <div *ngIf="submitted && f.servingNoticePeriod.errors" class="invalid-feedback">                <div *ngIf="f.servingNoticePeriod.errors.required">Serving Notice is required</div>              </div>            </div>          </div>          <div class="col-md-4">            <div class="form-group">              <label for="currentCompany">Current Company</label>              <input type="text" formControlName="currentCompany" class="form-control" placeholder="Enter your Current Company"                autocomplete="off" [ngClass]="{ \'is-invalid\': submitted && f.currentCompany.errors }">              <!-- Error Handling  -->              <div *ngIf="submitted && f.currentCompany.errors" class="invalid-feedback">                <div *ngIf="f.currentCompany.errors.required">Current Company is required</div>              </div>            </div>          </div>          <div class="col-md-4">            <div class="form-group">              <label for="hrContactPerson">HR Contact Person</label>              <input type="text" formControlName="hrContactPerson" class="form-control" placeholder="Enter your HR Contact Person "                autocomplete="off" [ngClass]="{ \'is-invalid\': submitted && f.hrContactPerson.errors }">              <!-- Error Handling  -->              <div *ngIf="submitted && f.hrContactPerson.errors" class="invalid-feedback">                <div *ngIf="f.hrContactPerson.errors.required">HR Contact Person is required</div>              </div>            </div>          </div>        </div>        <div class="row">          <div class="col-md-4">            <div class="form-group">              <label for="experience">Experience</label>              <input type="text" formControlName="experience" class="form-control" placeholder="Enter your Experience "                autocomplete="off" [ngClass]="{ \'is-invalid\': submitted && f.experience.errors }">              <!-- Error Handling  -->              <div *ngIf="submitted && f.experience.errors" class="invalid-feedback">                <div *ngIf="f.experience.errors.required">Experience is required</div>              </div>            </div>          </div>          <div class="col-md-4">            <div class="form-group">              <label for="designation">Designation</label>              <input type="text" formControlName="designation" class="form-control" placeholder="Enter your Designation"                autocomplete="off" [ngClass]="{ \'is-invalid\': submitted && f.designation.errors }">              <!-- Error Handling  -->              <div *ngIf="submitted && f.designation.errors" class="invalid-feedback">                <div *ngIf="f.designation.errors.required">Designation is required</div>              </div>            </div>          </div>          <div class="col-md-4">            <div class="form-group">              <label for="hclPositionRole">HCL Position (Role)</label>              <input type="text" formControlName="hclPositionRole" class="form-control" placeholder="Enter your HCL Position (Role)"                autocomplete="off" [ngClass]="{ \'is-invalid\': submitted && f.hclPositionRole.errors }">              <!-- Error Handling  -->              <div *ngIf="submitted && f.hclPositionRole.errors" class="invalid-feedback">                <div *ngIf="f.hclPositionRole.errors.required">HCL Position is required</div>              </div>            </div>          </div>        </div>        <div class="row">          <div class="col-md-4">            <div class="form-group">              <label for="referedBy">Referred By</label>              <input type="text" formControlName="referedBy" class="form-control" placeholder="Enter your Referred By "                autocomplete="off" [ngClass]="{ \'is-invalid\': submitted && f.referedBy.errors }">              <!-- Error Handling  -->              <div *ngIf="submitted && f.referedBy.errors" class="invalid-feedback">                <div *ngIf="f.referedBy.errors.required">Referred By is required</div>              </div>            </div>          </div>          <div class="col-md-4">            <div class="form-group">              <label for="modeOfInterview">Mode Of Interview</label>              <input type="text" formControlName="modeOfInterview" class="form-control" placeholder="Enter your Mode Of Interview "                autocomplete="off" [ngClass]="{ \'is-invalid\': submitted && f.modeOfInterview.errors }">                          <div *ngIf="submitted && f.modeOfInterview.errors" class="invalid-feedback">                <div *ngIf="f.modeOfInterview.errors.required">Mode Of Interview is required</div>              </div>            </div>          </div>          <div class="col-md-4">            <div class="form-group">              <label for="interviewDateTime">Interview Date</label>              <input type="text" formControlName="interviewDateTime" class="form-control" placeholder="Enter your Interview Date Time "                autocomplete="off" [ngClass]="{ \'is-invalid\': submitted && f.interviewDateTime.errors }">              <!-- Error Handling  -->              <div *ngIf="submitted && f.interviewDateTime.errors" class="invalid-feedback">                <div *ngIf="f.interviewDateTime.errors.required">Interview Date Time is required</div>              </div>            </div>          </div>        </div>        <div class="row">          <div class="col-md-4">            <div class="form-group">              <label for="currentCTC">Current CTC</label>              <input type="text" formControlName="currentCTC" class="form-control" placeholder="Enter your Current CTC"                autocomplete="off" [ngClass]="{ \'is-invalid\': submitted && f.currentCTC.errors }">              <!-- Error Handling  -->              <div *ngIf="submitted && f.currentCTC.errors" class="invalid-feedback">                <div *ngIf="f.currentCTC.errors.required">Current CTC is required</div>              </div>            </div>          </div>          <div class="col-md-4">            <div class="form-group">              <label for="expectedCTC">Expected CTC</label>              <input type="text" formControlName="expectedCTC" class="form-control" placeholder="Enter your "                autocomplete="off" [ngClass]="{ \'is-invalid\': submitted && f.expectedCTC.errors }">              <!-- Error Handling  -->              <div *ngIf="submitted && f.expectedCTC.errors" class="invalid-feedback">                <div *ngIf="f.expectedCTC.errors.required">Expected CTC is required</div>              </div>            </div>          </div>          <div class="col-md-4">            <div class="form-group">              <label for="status">Status</label>              <select class="custom-select" formControlName="status" [ngClass]="{ \'is-invalid\': submitted && f.status.errors }">                <!-- <option selected="selected">Select Status</option> -->                <option value="new">New</option>                <option value="selected">Selected</option>                <option value="rejected">Rejected</option>                <option value="hold">Hold</option>                <option value="progress">Progress</option>              </select>              <!-- <input type="text" formControlName="status" class="form-control" placeholder="Enter your " autocomplete="off"                [ngClass]="{ \'is-invalid\': submitted && f.status.errors }"> -->              <!-- Error Handling  -->              <div *ngIf="submitted && f.status.errors" class="invalid-feedback">                <div *ngIf="f.status.errors.required">Status is required</div>              </div>            </div>          </div>        </div>        <div class="row">          <div class="col-md-12">            <div class="form-group">              <label for="comments">HackerRank Score (%) and Comments</label>              <textarea formControlName="comments" class="form-control" rows="1" autocomplete="off" [ngClass]="{ \'is-invalid\': submitted && f.status.errors }"></textarea>              <!-- Error Handling  -->              <div *ngIf="submitted && f.comments.errors" class="invalid-feedback">                <div *ngIf="f.comments.errors.required">Comments are required</div>              </div>            </div>          </div>        </div>      </form>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AdminHomeComponent', 'selector': 'app-admin-home'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BatchResumeDataComponent', 'selector': 'app-batch-resume-data'},{'name': 'CandidateDetailsListComponent', 'selector': 'app-candidate-details-list'},{'name': 'CandidateProfileSummaryAddComponent', 'selector': 'app-candidate-profile-summary-add'},{'name': 'CandidateProfileSummaryComponent', 'selector': 'app-candidate-profile-summary'},{'name': 'ClientDetailsListComponent', 'selector': 'app-client-details-list'},{'name': 'ClientDetailsUpdateComponent', 'selector': 'app-client-details-update'},{'name': 'CustomerHomeComponent', 'selector': 'app-customer-home'},{'name': 'DmuDetailsAddComponent', 'selector': 'app-dmu-details-add'},{'name': 'DmuDetailsSearchComponent', 'selector': 'app-dmu-details-search'},{'name': 'GetResumeDataComponent', 'selector': 'app-get-resume-data'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MailTempleteComponent', 'selector': 'app-mail-templete'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NotFoundComponent', 'selector': 'app-not-found'},{'name': 'PaginationComponent', 'selector': 'app-pagination'},{'name': 'SowPessSearchComponent', 'selector': 'app-sow-pess-search'},{'name': 'SowPessUpdateComponent', 'selector': 'app-sow-pess-update'},{'name': 'UpdateCandidateDetailsComponent', 'selector': 'app-update-candidate-details'},{'name': 'UploadCandidateProfileComponent', 'selector': 'app-upload-candidate-profile'},{'name': 'ViewCandidateDetailsComponent', 'selector': 'app-view-candidate-details'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'ViewCandidateDetailsComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ViewCandidateDetailsComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

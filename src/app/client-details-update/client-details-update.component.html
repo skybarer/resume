@@ -1,0 +1,197 @@
+<!-- <br> -->
+<h6 class="text-center AboutESS" style="background-color: rgba(0,123,255,0.25);padding:0.2em;"><b>{{title}}</b></h6>
+<div class="container">
+  <div class="card mx-auto">
+    <div class="card-body">
+
+
+      <form [formGroup]="rf">
+
+        <div class="row">
+
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" formControlName="candidateName" class="form-control" placeholder="Enter Name"
+                autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.candidateName.errors }">
+              <div *ngIf="submitted && f.candidateName.errors" class="invalid-feedback">
+                <div *ngIf="f.candidateNamename.errors.required">First Name is required</div>
+                <div *ngIf="f.candidateName.errors.minLength">First Name min length should be greater than 3</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="expYrs">Exp Year(s)</label>
+              <input type="text" formControlName="expYrs" class="form-control" placeholder="Enter experience in years"
+                autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.expYrs.errors }">
+              <div *ngIf="submitted && f.expYrs.errors" class="invalid-feedback">
+                <div *ngIf="f.expYrs.errors.required">First Name is required</div>
+                <div *ngIf="f.expYrs.errors.minLength">First Name min length should be greater than 3</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="expMonths">Exp Month(s)</label>
+              <input type="text" formControlName="expMonths" class="form-control" placeholder="Enter experience in months"
+                autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.expMonths.errors }">
+              <div *ngIf="submitted && f.expMonths.errors" class="invalid-feedback">
+                <div *ngIf="f.expMonths.errors.required">First Name is required</div>
+                <div *ngIf="f.expMonths.errors.minLength">First Name min length should be greater than 3</div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="row">
+
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="stream">Stream</label>
+              <!-- <input type="text" formControlName="stream" class="form-control" placeholder="Enter Stream" autocomplete="off"
+                    [ngClass]="{ 'is-invalid': submitted && f.stream.errors }"> -->
+
+              <select class="custom-select" formControlName="stream" (change)="onChange()" [ngClass]="{ 'is-invalid': submitted && f.stream.errors }">
+                <option value="" selected="selected">Select stream</option>
+                <option *ngFor="let x of streams" [value]="x.streamName">
+                  {{x.streamName}}
+                </option>
+              </select>
+              <div *ngIf="submitted && f.stream.errors" class="invalid-feedback">
+                <div *ngIf="f.stream.errors.required">Stream is required</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="streamVo">Sub Stream</label>
+              <select class="custom-select" formControlName="subStream" [ngClass]="{ 'is-invalid': submitted && f.subStream.errors }">
+                <option value="" selected="selected"> Select Sub Stream</option>
+                <option *ngFor="let x of sbuStreams" [value]="x.subStreamName">
+                  {{x.subStreamName}}
+                </option>
+                <!-- <option value="IPE"> IPE</option>
+                <option value="IPE2"> IPE2</option>
+                <option value="IPE3">IPE3 </option> -->
+              </select>
+              <!-- <input type="text" formControlName="streamVo" class="form-control" placeholder="Enter sub stream"
+                autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.streamVo.errors }"> -->
+              <div *ngIf="submitted && f.subStream.errors" class="invalid-feedback">
+                <div *ngIf="f.subStream.errors.required">Sub Stream is required</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-2">
+            <div class="form-group">
+              <label for="clientInterviewDate">Client Interview Date</label>
+              <input type="date" formControlName="clientInterviewDate" class="form-control" autocomplete="off"
+                [ngClass]="{ 'is-invalid': submitted && f.clientInterviewDate.errors }" style="font-size: 13px;">
+              <div *ngIf="submitted && f.clientInterviewDate.errors" class="invalid-feedback">
+                <div *ngIf="f.clientInterviewDate.errors.required">Interview Date is required</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-2">
+            <div class="form-group">
+              <label for="clientInterviewTime">Client Interview Time</label>
+              <input type="time" formControlName="clientInterviewTime" class="form-control" autocomplete="off"
+                [ngClass]="{ 'is-invalid': submitted && f.clientInterviewTime.errors }">
+              <div *ngIf="submitted && f.clientInterviewTime.errors" class="invalid-feedback">
+                <div *ngIf="f.clientInterviewTime.errors.required">Client Interview Timeis required</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="row">
+
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="contactPerson">Contact Person</label>
+              <input type="text" formControlName="contactPerson" class="form-control" placeholder="Enter Contact Person"
+                autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.contactPerson.errors }">
+              <div *ngIf="submitted && f.contactPerson.errors" class="invalid-feedback">
+                <div *ngIf="f.contactPerson.errors.required">First Name is required</div>
+                <div *ngIf="f.contactPerson.errors.minLength">First Name min length should be greater than 3</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="mobileNo">Contanct Number</label>
+              <input type="text" formControlName="mobileNo" class="form-control" placeholder="Enter Stream"
+                autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.mobileNo.errors }">
+              <div *ngIf="submitted && f.mobileNo.errors" class="invalid-feedback">
+                <div *ngIf="f.mobileNo.errors.required">First Name is required</div>
+                <div *ngIf="f.mobileNo.errors.minLength">First Name min length should be greater than 3</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="status">Status</label>
+              <select class="custom-select" formControlName="status" [ngClass]="{ 'is-invalid': submitted && f.status.errors }">
+                <option value="" selected="selected"> Select Status</option>
+                <option *ngFor="let x of statusList" [value]="x.status">
+                  {{x.status}}
+                </option>
+              </select>
+              <div *ngIf="submitted && f.status.errors" class="invalid-feedback">
+                <div *ngIf="f.status.errors.required">Status is required</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+<!-- 
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="history">Comments</label>
+              <textarea class="form-control" placeholder="write your comments here." [ngClass]="{ 'is-invalid': submitted && f.status.errors }"></textarea>
+            </div>
+          </div>
+        </div> -->
+
+
+        <!-- <div class="row" *ngIf="loginService.hasRole('Admin');">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="history">History</label>
+              <textarea class="form-control" placeholder="access history done by the client is showed here"></textarea>
+            </div>
+          </div>
+        </div> -->
+
+        <div class="row">
+          <div class="col-*-* mx-auto" style="padding-top:5px;">
+            <!-- <button type="button" (click)="onSubmit()" class="btn btn-primary btn-lg btn-block">Submit
+                Details</button> -->
+
+            <button type="button" (click)="onUpdate();" class="btn btn-primary btn-sm">Update</button>
+            &nbsp;
+            <!-- <button type="button" (click)="onReset();" class="btn btn-secondary btn-sm">Reset</button> -->
+
+          </div>
+        </div>
+
+      </form>
+
+
+
+
+    </div>
+  </div>
+</div>

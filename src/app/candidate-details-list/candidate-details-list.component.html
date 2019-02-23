@@ -1,0 +1,156 @@
+<h6 class="text-center" style="background-color: rgba(0,123,255,0.25);padding:0.2em;"><b>{{title}}</b></h6>
+<div class="container-fluid">
+  <div class="card mx-auto">
+    <div class="card-body">
+
+
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="input-group input-group-sm mb-3">
+            <input type="text" class="form-control" [(ngModel)]="user" placeholder="search any field.">
+          </div>
+        </div>
+        <!-- <div class="col-md-1">
+          <div class="ml-auto">
+            <button class="btn btn-sm btn-primary" type="submit" data-toggle="tooltip" data-placement="top" title="download to excel"
+              (click)="tableToJson(response)">
+              <i class="fa fa-download" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div> -->
+      </div>
+      <div class="table-responsive">
+        <table id="candidate-table-list" class="table table-bordered table-striped table-sm">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">&nbsp;</th>
+              <th scope="col">S.No.</th>
+              <th scope="col">Name</th>
+              <th scope="col">Phone</th>
+              <th scope="col">Email</th>
+              <th scope="col">Exp Year(s)</th>
+              <th scope="col">Exp Month(s)</th>
+              <!-- <th scope="col">Service Notice</th> -->
+              <th scope="col">Role</th>
+              <th scope="col">Primary Skill</th>
+              <th scope="col">Secondary Skill</th>
+              <th scope="col">HackerRank Score (%)</th>
+              <!-- <th scope="col">Interview Date</th> -->
+              <th scope="col">Status</th>
+              <th scope="col">&nbsp;</th>
+            </tr>
+
+          </thead>
+          <tbody>
+            <tr *ngFor="let x of pagedItems  | 
+             tableFilter: {
+               name:user,
+               contactNo:user,
+               emailId:user,
+               expYears:user,
+               expMonths:user,
+               hclPositionRole:user,
+               primarySkill:user,
+               secondarySkill:user,
+               hackerRankScore:user,
+               status:user
+              }; 
+              let i=index; ">
+              <td class="" style="text-align:center;">
+                <input type="checkbox" [(ngModel)]="candidateIdList[x.id]">
+              </td>
+              <td scope="row">{{i+1}}</td>
+              <td>{{x?.name}}</td>
+              <td>{{x?.contactNo}}</td>
+              <td>{{x?.emailId}}</td>
+              <td>{{x?.expYears}}</td>
+              <td>{{x?.expMonths}}</td>
+              <!-- <td>{{x?.servingNoticePeriod}}</td> -->
+              <td>{{x?.hclPositionRole}}</td>
+              <td>{{x?.primarySkill}}</td>
+              <td>{{x?.secondarySkill}}</td>
+              <td>{{x?.hackerRankScore}}</td>
+              <!-- <td>{{x?.interviewDateTime}}</td> -->
+              <td>{{x?.status}}</td>
+              <td class="text-center">
+                <div class="btn-group btn-group-sm">
+                  <div class="btn-group" role="group" aria-label="operations">
+
+                    <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Profile Summary Add"
+                      *ngIf="hasRole('ADMIN');" (click)="profileSummaryAdd(x)">
+                      <i class="fa fa-plus" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="View"
+                      *ngIf="hasRole('ADMIN');" (click)="viewCandidateDetails(x)">
+                      <i class="fa fa-eye" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit"
+                      *ngIf="hasRole('ADMIN');" (click)="editCandidateDetails(x)">
+                      <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Upload Profile"
+                      *ngIf="hasRole('ADMIN');" (click)="uploadCandidateProfile(x)">
+                      <i class="fa fa-upload" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Profile Summary"
+                      (click)="ProfileSummary(x)">
+                      <i class="fa fa-user" aria-hidden="true"></i>
+                    </button>
+                    <!-- <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Download Profile">
+                    <i class="fa fa-download" aria-hidden="true"></i>
+                  </button> -->
+                  </div>
+                  <!-- <button type="button" class="btn btn-primary" (click)="editCandidateDetails(x)">
+                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                  </button> -->
+                  <!-- <button type="button" class="btn btn-warning">dele</button> -->
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+
+        <!-- pagination -->
+        <nav aria-label="Page navigation example">
+          <ul class="pagination" *ngIf="pager.pages && pager.pages.length" class="pagination">
+            <!-- <li class="page-item" [ngClass]="{disabled:pager.currentPage === 1}">
+                <a class="page-link" (click)="setPage(1)">First</a>
+              </li> -->
+            <li class="page-item" [ngClass]="{disabled:pager.currentPage === 1}">
+              <a class="page-link" (click)="setPage(pager.currentPage - 1)">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Previous</span>
+              </a>
+            </li>
+            <li class="page-item" *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}">
+              <a class="page-link" (click)="setPage(page)">{{page}}</a>
+            </li>
+            <li class="page-item" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+              <a class="page-link" (click)="setPage(pager.currentPage + 1)">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only">Next</span>
+              </a>
+            </li>
+            <!-- <li class="page-item" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+                <a class="page-link" (click)="setPage(pager.totalPages)">Last</a>
+              </li> -->
+          </ul>
+        </nav>
+
+      </div>
+      <button (click)="initateHackerrank();" class="btn-blue"> Initiate Hackerrank </button>
+      &nbsp;
+      <button (click)="processToClient()" class="btn-blue"> Shortlist Profile(s) </button>
+      &nbsp;
+      <button (click)="sendEmail()" class="btn-blue">Send Email
+      </button>
+      &nbsp;
+
+      <button (click)="tableToJson(response)" class="btn-blue"> Download </button>
+    </div>
+
+  </div>
+
+</div>

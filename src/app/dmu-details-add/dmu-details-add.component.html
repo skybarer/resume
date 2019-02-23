@@ -1,0 +1,112 @@
+<!-- <br> -->
+<h6 class="text-center AboutESS" style="background-color: rgba(0,123,255,0.25);padding:0.2em;"><b>{{title}}</b></h6>
+<div class="container">
+  <div class="card mx-auto">
+    <div class="card-body">
+
+
+      <form [formGroup]="rf">
+
+        <div class="row">
+
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="streamName">Stream</label>
+              <select class="custom-select" formControlName="streamName" (change)="onChange();" [ngClass]="{ 'is-invalid': submitted && f.streamName.errors }">
+                <option value="" selected="selected">Select Stream</option>
+                <option *ngFor="let x of streams" [value]="x.streamName"> {{x.streamName}} </option>
+              </select>
+
+              <div *ngIf="submitted && f.streamName.errors" class="invalid-feedback">
+                <div *ngIf="f.streamName.errors.required"> stream name is required</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="subStreamName">Sub Stream</label>
+              <select class="custom-select" formControlName="subStreamName" [ngClass]="{ 'is-invalid': submitted && f.subStreamName.errors }">
+                <option value="" selected="selected">Select Sub Streams</option>
+                <option *ngFor="let y of sbuStreams" [value]="y.subStreamName"> {{y.subStreamName}} </option>
+              </select>
+              <div *ngIf="submitted && f.subStreamName.errors" class="invalid-feedback">
+                <div *ngIf="f.subStreamName.errors.required">substream is required</div>
+              
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="skillName">Skill</label>
+              <select class="custom-select" formControlName="skillName" [ngClass]="{ 'is-invalid': submitted && f.skillName.errors }">
+                <option value="" selected="selected">Select Skills</option>
+                <option *ngFor="let y of skills" [value]="y.primarySkill"> {{y.primarySkill}} </option>
+              </select>
+              <div *ngIf="submitted && f.skillName.errors" class="invalid-feedback">
+                <div *ngIf="f.skillName.errors.required">skill name is required</div>
+             
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="count">Count</label>
+              <input type="text" formControlName="count" class="form-control" placeholder="Enter the count required"
+                autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.count.errors }">
+              <div *ngIf="submitted && f.count.errors" class="invalid-feedback">
+                <div *ngIf="f.count.errors.required">count is required</div>
+                <div *ngIf="f.count.errors.pattern">count should be a digit</div>
+             
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="fullfilled">Fulfilment</label>
+              <input type="text" formControlName="fullfilled" class="form-control" placeholder="Enter fulfilment count"
+                autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.fullfilled.errors }">
+              <div *ngIf="submitted && f.fullfilled.errors" class="invalid-feedback">
+                <div *ngIf="f.fullfilled.errors.required">Fulfilment is required</div>
+                <div *ngIf="f.fullfilled.errors.pattern">Fulfilment should be a digit</div>
+              
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="gap">Gap</label>
+              <input type="text" formControlName="gap" class="form-control" placeholder="Enter gap count" autocomplete="off"
+                [ngClass]="{ 'is-invalid': submitted && f.gap.errors }">
+              <div *ngIf="submitted && f.gap.errors" class="invalid-feedback">
+                <div *ngIf="f.gap.errors.required">Gap is required</div>
+                <div *ngIf="f.gap.errors.pattern">Gap should be a digit</div>
+                
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col-*-* mx-auto" style="padding-top:5px;">
+            <!-- <button type="button" (click)="onSubmit()" class="btn btn-primary btn-lg btn-block">Submit
+              Details</button> -->
+
+            <button type="button" (click)="onSubmit();" class="btn btn-primary btn-sm">Submit</button>
+
+            <!-- <button type="button" (click)="onReset();" class="btn btn-secondary btn-sm">Reset</button> -->
+
+          </div>
+        </div>
+
+      </form>
+
+
+    </div>
+  </div>
+</div>

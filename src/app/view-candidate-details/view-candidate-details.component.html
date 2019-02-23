@@ -1,0 +1,289 @@
+<!-- <br> -->
+<h6 class="text-center" style="background-color: rgba(0,123,255,0.25);padding:0.2em;"><b>{{headerDetails}}</b></h6>
+<div class="container">
+  <div class="card mx-auto">
+    <div class="card-body">
+
+      <!-- 
+      <div class="row">
+        <div class="col-md-1 ml-auto">
+
+          <div class="dropdown dropright">
+            <div class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-cog" aria-hidden="true" style="float:right;cursor:pointer"></i>
+            </div>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">update</a>
+              <a class="dropdown-item" href="#">Link 2</a>
+              <a class="dropdown-item" href="#">Link 3</a>
+            </div>  
+          </div>
+
+        </div>
+      </div> -->
+
+
+
+      <form [formGroup]="rf">
+
+        <div class="row">
+
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" formControlName="name" class="form-control" placeholder="Enter Name" autocomplete="off"
+                [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+              <!-- Error Handling  -->
+              <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                <div *ngIf="f.name.errors.required">First Name is required</div>
+                <div *ngIf="f.name.errors.minLength">First Name min length should be greater than 3</div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="contactNo">Contact Number</label>
+              <input type="text" formControlName="contactNo" class="form-control" autocomplete="off" placeholder="Enter Contact Number"
+                [ngClass]="{ 'is-invalid': submitted && f.contactNo.errors }">
+              <!-- Error Handling  -->
+              <div *ngIf="submitted && f.contactNo.errors" class="invalid-feedback">
+                <div *ngIf="f.contactNo.errors.required">Contact Number is required</div>
+                <div *ngIf="f.contactNo.errors.minlength">Contact Number min length should be 10</div>
+                <div *ngIf="f.contactNo.errors.maxlength">Contact Number max length should be 10</div>
+                <div *ngIf="f.contactNo.errors.pattern">Contact Number should be a digit</div>
+              </div>
+
+            </div>  
+          </div>
+
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="alternateContactNo">Alternate Number</label>
+              <input type="number" formControlName="alternateContactNo" class="form-control" autocomplete="off"
+                placeholder="Enter Alternate Number" [ngClass]="{ 'is-invalid': submitted && f.alternateContactNo.errors }">
+              <!-- Error Handling  -->
+              <div *ngIf="submitted && f.alternateContactNo.errors" class="invalid-feedback">
+                <div *ngIf="f.alternateContactNo.errors.required">Alternate Number is required</div>
+                <div *ngIf="f.alternateContactNo.errors.minlength">Alternate Number min length should be 10</div>
+                <div *ngIf="f.alternateContactNo.errors.maxlength">Alternate Number max length should be 10</div>
+                <div *ngIf="f.alternateContactNo.errors.pattern">Alternate Number should be a digit</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="emailId">Email Id</label>
+              <input type="email" formControlName="emailId" class="form-control" placeholder="Enter your valid email"
+                autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.emailId.errors }">
+              <!-- Error Handling  -->
+              <div *ngIf="submitted && f.emailId.errors" class="invalid-feedback">
+                <div *ngIf="f.emailId.errors.required">Email Id is required</div>
+                <!-- <div *ngIf="f.emailId.errors.email">Email format is invalid</div> -->
+                <div *ngIf="f.emailId.errors.pattern">Email format is invalid</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="skillSet">Skill Set</label>
+              <input type="text" formControlName="skillSet" class="form-control" placeholder="Enter your skill set"
+                autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.skillSet.errors }">
+              <!-- Error Handling  -->
+              <div *ngIf="submitted && f.skillSet.errors" class="invalid-feedback">
+                <div *ngIf="f.skillSet.errors.required">Skill Set is required</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="noticePeriod">Notice Period</label>
+              <input type="text" formControlName="noticePeriod" class="form-control" placeholder="Enter your Notice Period"
+                autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.noticePeriod.errors }">
+              <!-- Error Handling  -->
+              <div *ngIf="submitted && f.noticePeriod.errors" class="invalid-feedback">
+                <div *ngIf="f.noticePeriod.errors.required">Notice Period is required</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="servingNoticePeriod">Serving Notice Period</label>
+              <select class="custom-select" formControlName="servingNoticePeriod" [ngClass]="{ 'is-invalid': submitted && f.servingNoticePeriod.errors }">
+                <!-- <option selected="selected">Select Yes or No</option> -->
+                <option value="Y">Yes</option>
+                <option value="N">No</option>
+              </select>
+              <!-- <input type="text" class="form-control" placeholder="Enter your Serving Notice Period " autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.servingNoticePeriod.errors }"> -->
+              <!-- Error Handling  -->
+              <div *ngIf="submitted && f.servingNoticePeriod.errors" class="invalid-feedback">
+                <div *ngIf="f.servingNoticePeriod.errors.required">Serving Notice is required</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="currentCompany">Current Company</label>
+              <input type="text" formControlName="currentCompany" class="form-control" placeholder="Enter your Current Company"
+                autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.currentCompany.errors }">
+              <!-- Error Handling  -->
+              <div *ngIf="submitted && f.currentCompany.errors" class="invalid-feedback">
+                <div *ngIf="f.currentCompany.errors.required">Current Company is required</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="hrContactPerson">HR Contact Person</label>
+              <input type="text" formControlName="hrContactPerson" class="form-control" placeholder="Enter your HR Contact Person "
+                autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.hrContactPerson.errors }">
+              <!-- Error Handling  -->
+              <div *ngIf="submitted && f.hrContactPerson.errors" class="invalid-feedback">
+                <div *ngIf="f.hrContactPerson.errors.required">HR Contact Person is required</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="experience">Experience</label>
+              <input type="text" formControlName="experience" class="form-control" placeholder="Enter your Experience "
+                autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.experience.errors }">
+              <!-- Error Handling  -->
+              <div *ngIf="submitted && f.experience.errors" class="invalid-feedback">
+                <div *ngIf="f.experience.errors.required">Experience is required</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="designation">Designation</label>
+              <input type="text" formControlName="designation" class="form-control" placeholder="Enter your Designation"
+                autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.designation.errors }">
+              <!-- Error Handling  -->
+              <div *ngIf="submitted && f.designation.errors" class="invalid-feedback">
+                <div *ngIf="f.designation.errors.required">Designation is required</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="hclPositionRole">HCL Position (Role)</label>
+              <input type="text" formControlName="hclPositionRole" class="form-control" placeholder="Enter your HCL Position (Role)"
+                autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.hclPositionRole.errors }">
+              <!-- Error Handling  -->
+              <div *ngIf="submitted && f.hclPositionRole.errors" class="invalid-feedback">
+                <div *ngIf="f.hclPositionRole.errors.required">HCL Position is required</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="referedBy">Referred By</label>
+              <input type="text" formControlName="referedBy" class="form-control" placeholder="Enter your Referred By "
+                autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.referedBy.errors }">
+              <!-- Error Handling  -->
+              <div *ngIf="submitted && f.referedBy.errors" class="invalid-feedback">
+                <div *ngIf="f.referedBy.errors.required">Referred By is required</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="modeOfInterview">Mode Of Interview</label>
+              <input type="text" formControlName="modeOfInterview" class="form-control" placeholder="Enter your Mode Of Interview "
+                autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.modeOfInterview.errors }">
+            
+              <div *ngIf="submitted && f.modeOfInterview.errors" class="invalid-feedback">
+                <div *ngIf="f.modeOfInterview.errors.required">Mode Of Interview is required</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="interviewDateTime">Interview Date</label>
+              <input type="text" formControlName="interviewDateTime" class="form-control" placeholder="Enter your Interview Date Time "
+                autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.interviewDateTime.errors }">
+              <!-- Error Handling  -->
+              <div *ngIf="submitted && f.interviewDateTime.errors" class="invalid-feedback">
+                <div *ngIf="f.interviewDateTime.errors.required">Interview Date Time is required</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="currentCTC">Current CTC</label>
+              <input type="text" formControlName="currentCTC" class="form-control" placeholder="Enter your Current CTC"
+                autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.currentCTC.errors }">
+              <!-- Error Handling  -->
+              <div *ngIf="submitted && f.currentCTC.errors" class="invalid-feedback">
+                <div *ngIf="f.currentCTC.errors.required">Current CTC is required</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="expectedCTC">Expected CTC</label>
+              <input type="text" formControlName="expectedCTC" class="form-control" placeholder="Enter your "
+                autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.expectedCTC.errors }">
+              <!-- Error Handling  -->
+              <div *ngIf="submitted && f.expectedCTC.errors" class="invalid-feedback">
+                <div *ngIf="f.expectedCTC.errors.required">Expected CTC is required</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="status">Status</label>
+              <select class="custom-select" formControlName="status" [ngClass]="{ 'is-invalid': submitted && f.status.errors }">
+                <!-- <option selected="selected">Select Status</option> -->
+                <option value="new">New</option>
+                <option value="selected">Selected</option>
+                <option value="rejected">Rejected</option>
+                <option value="hold">Hold</option>
+                <option value="progress">Progress</option>
+              </select>
+              <!-- <input type="text" formControlName="status" class="form-control" placeholder="Enter your " autocomplete="off"
+                [ngClass]="{ 'is-invalid': submitted && f.status.errors }"> -->
+              <!-- Error Handling  -->
+              <div *ngIf="submitted && f.status.errors" class="invalid-feedback">
+                <div *ngIf="f.status.errors.required">Status is required</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="comments">HackerRank Score (%) and Comments</label>
+              <textarea formControlName="comments" class="form-control" rows="1" autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.status.errors }"></textarea>
+              <!-- Error Handling  -->
+              <div *ngIf="submitted && f.comments.errors" class="invalid-feedback">
+                <div *ngIf="f.comments.errors.required">Comments are required</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</div>

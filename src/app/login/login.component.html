@@ -1,0 +1,96 @@
+<div class="container-fluid">
+  <br>
+
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="text-center" style="color: white">DIGITAL RESOURCING PLATFORM </h3>
+      <div class="text-center">
+        <img src="assets/hcl_logo.png" alt="hcl logo" style="width:40%;height:auto" />
+      </div>
+      <p></p>
+      <div id="demo" class="carousel slide mx-400 d-block d-sm-none d-md-block" data-interval="1500" data-ride="carousel">
+
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+          <li data-target="#demo" data-slide-to="3"></li>
+        </ul>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/carsoule/car_5.jpg" alt="Los Angeles" width="100%" height="">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/carsoule/car_1.jpg" alt="Los Angeles" width="100%" height="">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/carsoule/car_3.jpg" alt="New York" width="100%" height="">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/carsoule/car_4.jpg" alt="car5" width="100%" height="">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/carsoule/car_2.jpg" alt="Chicago" width="100%" height="">
+          </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+
+    </div>
+    <div class="col-md-6">
+      <p></p>
+      <div class="card mx-auto" style="max-width: 20rem;">
+        <div class="card-body">
+          <h5 class="text-center" style="background-color:#0069d9;color: white;">
+            <b>HCL DRP LOGIN</b>
+          </h5>
+
+          <form [formGroup]="rf">
+
+            <div class="form-group">
+              <label for="name">Username</label>
+              <input type="text" class="form-control" formControlName="username" placeholder="Enter user name"
+                [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+              <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                <div *ngIf="f.username.errors.required">Username is required</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="name">Password</label>
+              <input type="password" class="form-control" formControlName="password" placeholder="Enter password"
+                [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+              <span class="form-control-feedback glyphicon glyphicon-ok"></span>
+              <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required">Password is required</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="name">Role</label>
+              <select name="select" class="custom-select custom-select-md" formControlName="role" [ngClass]="{ 'is-invalid': submitted && f.role.errors }">
+                <option value="" selected="selected">Select Role</option>
+                <option *ngFor="let x of roles" [value]="x | json">{{x.roleName}}</option>
+              </select>
+              <div *ngIf="submitted && f.role.errors" class="invalid-feedback">
+                <div *ngIf="f.role.errors.required">Role is required</div>
+              </div>
+            </div>
+
+            <br>
+
+            <button class="btn btn-sm btn-primary btn-block" type="submit" (click)="onSubmit()">Sign in</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

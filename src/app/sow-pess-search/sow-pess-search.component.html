@@ -1,0 +1,100 @@
+<h6 class="text-center" style="background-color: rgba(0,123,255,0.25);padding:0.2em;"><b>{{title}}</b></h6>
+<div class="container">
+  <div class="card mx-auto">
+    <div class="card-body">
+
+      <!-- {{response |json}} -->
+
+      <div class="row">
+        <div class="col-md-11">
+          <div class="input-group input-group-sm mb-3">
+            <input type="text" class="form-control" [(ngModel)]="user" placeholder="search here to get the details.">
+          </div>
+        </div>
+        <div class="col-md-1">
+          <div class="ml-auto">
+            <button class="btn btn-sm btn-primary" type="submit" data-toggle="tooltip" data-placement="top" title="download to excel"
+              (click)="tableToJson(response)">
+              <i class="fa fa-download" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="table-responsive">
+        <table id="candidate-table-list" class="table table-bordered table-striped table-sm">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">Select</th>
+              <th scope="col">S.No</th>
+              <th scope="col">Name</th>
+              <!-- <th scope="col">SOW Number</th>
+            <th scope="col">Contract Number</th> -->
+
+              <th scope="col">Stream</th>
+              <th scope="col">Sub Stream</th>
+              <th scope="col">Status</th>
+            </tr>
+
+          </thead>
+          <tbody>
+
+            <tr *ngFor="let x of response  | tableFilter: {candidateName:user, stream:user, subStream:user, stream:user, subStream:user } ; let i=index; ">
+              <td class="" style="text-align:center;">
+                <input type="checkbox" value="{{x.clientProcessId}}" [(ngModel)]="sowPessIds[x.clientProcessId]"
+                  (change)="onChange(i+1)">
+              </td>
+              <td>{{i+1}}</td>
+              <td> {{x?.candidateName}}</td>
+              <td>{{x?.stream}}</td>
+              <td>{{x?.subStream}}</td>
+              <td>
+
+                <select name="status" [(ngModel)]="x.status">
+                  <!-- <option selected="selected" value="PES PENDING">PES PENDING</option> -->
+                  <option value="PES INITIATED">PES INITIATED</option>
+                </select>
+
+              </td>
+
+            </tr>
+            <!-- <tr *ngFor="let x of response  | tableFilter: {name:user, sowNo:user, status:user, stream:user, subStream:user } ; let i=index; ">
+            <td class="" style="text-align:center;">
+              <input type="checkbox" value="{{x.clientProcessId}}" [(ngModel)]="sowPessIds[x.clientProcessId]" (change)="onChange(i+1)">
+            </td>
+            <td scope="row">{{i+1}}</td>
+            <td>
+              {{x?.candidateName}}
+            </td>
+            <td>
+              <div [hidden]="x.state"> {{x?.sowNo}}</div>
+              <div [hidden]="!x.state">
+                <input type="text" value="{{x?.sowNo}}" [(ngModel)]="x.sowNo">
+              </div>
+            </td>
+            <td>
+              <div [hidden]="x.state"> {{x?.contractNumber}}</div>
+              <div [hidden]="!x.state">
+                <input type="text" value="{{x?.contractNumber}}" [(ngModel)]="x.contractNumber">
+              </div>
+            </td>
+            <td>
+              <div [hidden]="x.state">{{x?.status}}</div>
+              <div [hidden]="!x.state">
+                <select name="status" [(ngModel)]="x.status">
+                  <option *ngFor="let y of statusData" [value]="y.status" [selected]="y.status == 'PES PENDING'">{{y.status}}</option>
+                </select>
+              </div>
+            </td>
+            <td>{{x?.stream}}</td>
+            <td>{{x?.subStream}}</td>
+          </tr> -->
+          </tbody>
+        </table>
+      </div>
+
+      <button (click)="processToClient()"> Submit </button>
+
+    </div>
+  </div>
+
+</div>

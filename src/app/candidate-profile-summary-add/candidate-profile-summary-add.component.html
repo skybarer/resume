@@ -1,0 +1,217 @@
+<h6 class="text-center" style="background-color: rgba(0,123,255,0.25);padding:0.2em;"><b>{{title}}</b></h6>
+<div class="container">
+
+  <div class="card mx-auto">
+    <div class="card-body">
+      <form [formGroup]="rf" enctype='multipart/form-data'>
+
+        <div class="row">
+
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="candidateName" class="required">Candidate Name</label>
+              <input type="text" formControlName="candidateName" class="form-control" placeholder="Enter Candidate Name"
+                autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.candidateName.errors }">
+              <div *ngIf="submitted && f.candidateName.errors" class="invalid-feedback">
+                <div *ngIf="f.candidateName.errors.required">First candidateName is required</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="designation" class="required">Designation</label>
+              <input type="text" formControlName="designation" class="form-control" placeholder="Enter designation"
+                autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.designation.errors }">
+              <div *ngIf="submitted && f.designation.errors" class="invalid-feedback">
+                <div *ngIf="f.designation.errors.required">First candidateName is required</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <label for="resume">Photo Upload</label>
+            <div class="form-group">
+              <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#imageUploadModal">click
+                here to upload</button>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="imageUploadModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+              aria-hidden="true">
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Upload Profile Picture</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-3">
+                        <p></p>
+                        <span class="result" *ngIf="data1.image">
+                          <img [src]="data1.image" [width]="cropperSettings1.croppedWidth" [height]="cropperSettings1.croppedHeight">
+                        </span>
+                      </div>
+                      <div class="col-1"></div>
+                      <div class="col-8">
+                        <img-cropper [image]="data1" [settings]="cropperSettings1" (onCrop)="cropped($event)"></img-cropper>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+
+            <label for="experience" class="required">Experience</label>
+            <div class="form-group">
+              <textarea formControlName="experienceLine1" class="form-control" rows="1" autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.experienceLine1.errors }"></textarea>
+              <div *ngIf="submitted && f.experienceLine1.errors" class="invalid-feedback">
+                <div *ngIf="f.experienceLine1.errors.required">experienceLine1 are required</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <textarea formControlName="experienceLine2" class="form-control" rows="1" autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.experienceLine2.errors }"></textarea>
+              <div *ngIf="submitted && f.experienceLine2.errors" class="invalid-feedback">
+                <div *ngIf="f.experienceLine2.errors.required">experienceLine2 are required</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <textarea formControlName="experienceLine3" class="form-control" rows="1" autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.experienceLine3.errors }"></textarea>
+              <div *ngIf="submitted && f.experienceLine3.errors" class="invalid-feedback">
+                <div *ngIf="f.experienceLine3.errors.required">experienceLine3 are required</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <textarea formControlName="experienceLine4" class="form-control" rows="1" autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.experienceLine4.errors }"></textarea>
+              <div *ngIf="submitted && f.experienceLine4.errors" class="invalid-feedback">
+                <div *ngIf="f.experienceLine4.errors.required">experienceLine4 are required</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+
+            <label for="Skills" class="required">Skills & Highlights</label>
+            <div class="form-group">
+              <textarea formControlName="highlightsLine1" class="form-control" rows="1" autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.highlightsLine1.errors }"></textarea>
+              <div *ngIf="submitted && f.highlightsLine1.errors" class="invalid-feedback">
+                <div *ngIf="f.highlightsLine1.errors.required">highlightsLine1 are required</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <textarea formControlName="highlightsLine2" class="form-control" rows="1" autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.highlightsLine2.errors }"></textarea>
+              <div *ngIf="submitted && f.highlightsLine2.errors" class="invalid-feedback">
+                <div *ngIf="f.highlightsLine2.errors.required">highlightsLine2 are required</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <textarea formControlName="highlightsLine3" class="form-control" rows="1" autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.highlightsLine3.errors }"></textarea>
+              <div *ngIf="submitted && f.highlightsLine3.errors" class="invalid-feedback">
+                <div *ngIf="f.highlightsLine3.errors.required">Comments are required</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <textarea formControlName="highlightsLine4" class="form-control" rows="1" autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.highlightsLine4.errors }"></textarea>
+              <div *ngIf="submitted && f.highlightsLine4.errors" class="invalid-feedback">
+                <div *ngIf="f.highlightsLine4.errors.required">highlightsLine4 are required</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+
+            <label for="experience" class="required">Profile Description</label>
+            <div class="form-group">
+              <textarea formControlName="profileDescription" class="form-control" rows="2" autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.profileDescription.errors }"></textarea>
+              <div *ngIf="submitted && f.profileDescription.errors" class="invalid-feedback">
+                <div *ngIf="f.profileDescription.errors.required">profileDescription are required</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+
+            <label for="profile" class="required">Profile</label>
+            <div class="form-group">
+              <textarea formControlName="profileLine1" class="form-control" rows="1" autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.profileLine1.errors }"></textarea>
+              <div *ngIf="submitted && f.profileLine1.errors" class="invalid-feedback">
+                <div *ngIf="f.profileLine1.errors.required">Comments are required</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <textarea formControlName="profileLine2" class="form-control" rows="1" autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.profileLine2.errors }"></textarea>
+              <div *ngIf="submitted && f.profileLine2.errors" class="invalid-feedback">
+                <div *ngIf="f.profileLine2.errors.required">profileLine2 are required</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <textarea formControlName="profileLine3" class="form-control" rows="1" autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.profileLine3.errors }"></textarea>
+              <div *ngIf="submitted && f.profileLine3.errors" class="invalid-feedback">
+                <div *ngIf="f.profileLine3.errors.required">Comments are required</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <textarea formControlName="profileLine4" class="form-control" rows="1" autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.profileLine4.errors }"></textarea>
+              <div *ngIf="submitted && f.profileLine4.errors" class="invalid-feedback">
+                <div *ngIf="f.profileLine4.errors.required">Comments are required</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- <div class="row">
+          <div class="col-md-12">
+            <label for="skills" class="required">Skills</label>
+            <textarea formControlName="skills" class="form-control" rows="2" autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.skills.errors }"></textarea>
+            <div *ngIf="submitted && f.skills.errors" class="invalid-feedback">
+              <div *ngIf="f.skills.errors.required">Comments are required</div>
+            </div>
+          </div>
+        </div> -->
+
+        <br>
+
+        <div class="row">
+          <div class="col-*-* mx-auto" style="padding-top:5px;">
+
+            <button type="button" (click)="onSubmit();" class="btn btn-primary btn-sm">Submit</button>
+            &nbsp;
+            <button type="button" (click)="onReset();" class="btn btn-secondary btn-sm">Reset</button>
+
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+
+
+</div>

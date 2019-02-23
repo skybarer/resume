@@ -1,0 +1,138 @@
+<h6 class="text-center" style="background-color: rgba(0,123,255,0.25);padding:0.2em;"><b>{{title}}</b></h6>
+<div class="container">
+  <div class="card mx-auto">
+    <div class="card-body">
+
+      <!-- {{response |json}} -->
+      <!-- {{demandStream |json}} -->
+
+
+      <form [formGroup]="rf">
+        <div class="row">
+          <div class="col-md-3">
+
+            <div class="form-group">
+              <label for="streamName">Stream</label>
+              <select class="custom-select" formControlName="streamName" (change)="onChange();" [ngClass]="{ 'is-invalid': submitted && f.streamName.errors }">
+                <option value="" selected="selected">Select Stream</option>
+                <option *ngFor="let x of streams" [value]="x.streamName"> {{x.streamName}} </option>
+              </select>
+
+            
+              <div *ngIf="submitted && f.streamName.errors" class="invalid-feedback">
+                <div *ngIf="f.streamName.errors.required">Stream is required</div>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="col-md-3">
+
+            <div class="form-group">
+              <label for="subStreamName">Sub Stream</label>
+              <select class="custom-select" formControlName="subStreamName" [ngClass]="{ 'is-invalid': submitted && f.subStreamName.errors }">
+                <option value="" selected="selected">Select Sub Streams</option>
+                <option *ngFor="let y of sbuStreams" [value]="y.subStreamName"> {{y.subStreamName}} </option>
+              </select>
+
+               <div *ngIf="submitted && f.subStreamName.errors" class="invalid-feedback">
+                <div *ngIf="f.subStreamName.errors.required">Sub Stream required</div>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="col-md-3">
+
+            <div class="form-group">
+              <label for="primarySkill">Skill</label>
+              <select class="custom-select" formControlName="skillName" [ngClass]="{ 'is-invalid': submitted && f.skillName.errors }">
+                <option value="" selected="selected">Select Skills</option>
+                <option *ngFor="let y of skills" [value]="y.primarySkill"> {{y.primarySkill}} </option>
+              </select>
+
+              <div *ngIf="submitted && f.skillName.errors" class="invalid-feedback">
+                <div *ngIf="f.skillName.errors.required">Skill is required</div>
+              </div>
+            </div>
+
+
+          </div>
+
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="button">&nbsp;</label>
+              <button type="button" (click)="onSearch();" class="btn btn-primary btn-sm form-control">Submit</button>
+            </div>
+          </div>
+        </div>
+        
+      </form>
+
+
+      <br>
+      <!-- {{data | json}} -->
+
+
+
+      <div class="row">
+        <div class="col-md-11">
+          <div class="input-group input-group-sm mb-3">
+            <input type="text" class="form-control" [(ngModel)]="user" placeholder="search here to get the details.">
+          </div>
+        </div>
+        <div class="col-md-1">
+          <div class="ml-auto">
+            <button class="btn btn-sm btn-primary" type="submit" data-toggle="tooltip" data-placement="top" title="download to excel"
+              (click)="tableToJson(response)">
+              <i class="fa fa-download" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-responsive">
+        <table id="candidate-table-list" class="table table-bordered table-striped table-sm">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">S.No</th>
+              <th scope="col">Stream</th>
+              <th scope="col">SubStream</th>
+              <th scope="col">Skill</th>
+              <th scope="col">Count</th>
+              <th scope="col">FullFilment</th>
+              <th scope="col">Gap</th>
+            </tr>
+
+          </thead>
+          <tbody>
+            <tr *ngFor="let x of response  | tableFilter: {candidateName:user, contactPerson:user, skill:user, status:user } ; let i=index; ">
+              <th scope="row">{{i+1}}</th>
+              <td>{{x?.streamName}}</td>
+              <td>{{x?.subStreamName}}</td>
+              <td>{{x?.skillName}}</td>
+              <td>{{x?.count}}</td>
+              <td>{{x?.fullfilled}}</td>
+              <td>
+                <a href="javascript:void(0)" (click)="onGapProfileSelect(x);"> {{x?.gap}}</a>
+              </td>
+              <!-- <td class="text-center">
+              <div class="btn-group btn-group-sm">
+                <div class="btn-group" role="group" aria-label="operations">
+                  <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit"
+                    (click)="clientDetailsUpdate(x)">
+                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </td> -->
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+    </div>
+  </div>
+
+</div>

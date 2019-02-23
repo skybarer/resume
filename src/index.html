@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>HCL DRP</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
+</head>
+
+<body class="LightBackColor2">
+  <app-root></app-root>
+
+</body>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $("body").tooltip({ selector: '[data-toggle=tooltip]', trigger: 'hover' })
+      .on('click', function () {
+        $('.tooltip').not(this).hide();
+      });
+
+  });
+</script>
+
+</html>
